@@ -1,0 +1,40 @@
+// common values
+$centerValue: center;
+$autoValue: auto;
+
+// flex values
+$flexValue: flex;
+
+// pixel values
+$Pix1Value: 1px; $Pix2Value: 2px; $Pix3Value: 3px;
+$Pix4Value: 4px; $Pix5Value: 5px; $Pix6Value: 6px;
+$Pix7Value: 7px; $Pix8Value: 8px; $Pix9Value: 9px;
+$Pix10Value: 10px; $Pix15Value: 15px; $Pix20Value: 20px;
+$Pix25Value: 25px; $Pix30Value: 30px; $Pix40Value: 40px;
+$Pix50Value: 50px; $Pix75Value: 75px; $Pix100Value: 100px;
+
+// percentage values
+$Percent1Value: 1%; $Percent2Value: 2%; $Percent3Value: 3%;
+$Percent4Value: 4%; $Percent5Value: 5%; $Percent6Value: 6%;
+$Percent7Value: 7%; $Percent8Value: 8%; $Percent9Value: 9%;
+$Percent10Value: 10%; $Percent15Value: 15%; $Percent20Value: 20%;
+$Percent25Value: 25%; $Percent30Value: 30%; $Percent40Value: 40%;
+$Percent50Value: 50%; $Percent75Value: 75%; $Percent100Value: 100%;
+
+// colors
+$baseAppColor: #3F51B5;
+$whiteValue: #fff;
+
+.__login_layout {
+    background-color: $baseAppColor;
+    height: $Percent100Value;
+    display: $flexValue;
+}
+
+.__login_reg_container {
+    min-width: $Pix100Value + $Pix100Value + $Pix100Value;
+    width: $Pix100Value + $Pix100Value + $Pix100Value + $Pix100Value;
+    margin: $autoValue;
+    background-color: $whiteValue;
+    border-radius: $Pix5Value;
+}

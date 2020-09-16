@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginRegisterComponent } from './components/login-register/login-register.component';
 
 const routes: Routes = [
-  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+  { path: 'home', component: LoginRegisterComponent },
   {
     path: '',
     redirectTo: 'home',

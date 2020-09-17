@@ -1,8 +1,58 @@
 <div class="__login_layout">
-    <div class="__login_reg_container">
-        <p>login</p>
-        <p>login</p>
-        <p>login</p>
-        <p>login</p>
+  <div class="__login_reg_container __form_container">
+    <h3 class="__Login_title"><b>Login</b></h3>
+    <div class="__error_message">Please enter valid credentials.</div>
+    <input
+      type="text"
+      name=""
+      placeholder="Your email"
+      id=""
+      class="__form_field __form_username"
+    />
+    <input
+      type="password"
+      name=""
+      placeholder="Your password"
+      id=""
+      class="__form_field __form_password"
+    />
+    <div class="__forgot_remember">
+      <p>
+        <span>Forgot password?</span>
+        <span class="__remember_container">
+          <span
+            ><input
+              type="checkbox"
+              (change)="rememberChecked = !rememberChecked"
+              [checked]="rememberChecked"
+              name=""
+              id=""
+          /></span>
+          <span (click)="rememberClick()">Remember me</span>
+        </span>
+      </p>
     </div>
+    <button type="submit" class="__form_field __form_submit">LOGIN</button>
+    <p class="__or_seperator">- or -</p>
+    <div class="__social_login_container">
+      <p class="__social_title">Sign in with</p>
+      <div class="__social_icons">
+        <p>
+          <img
+            src="../../../assets/icons/facebook_login.png"
+            alt=""
+            class="__social_login __facebook"
+          />
+          <img
+            src="../../../assets/icons/google_login.png"
+            alt=""
+            class="__social_login __google"
+          />
+        </p>
+      </div>
+    </div>
+    <div class="__no_account_container">
+      <p>Don't have an Account? <b>Sign up</b></p>
+    </div>
+  </div>
 </div>

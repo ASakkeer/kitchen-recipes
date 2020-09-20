@@ -5,9 +5,11 @@
     <input
       type="text"
       name=""
-      placeholder="Your email"
+      placeholder="Your username"
       id=""
       class="__form_field __form_username"
+      [(ngModel)]="userName"
+      (keyup)="namePasswordVerify(1)"
     />
     <input
       type="password"
@@ -15,6 +17,8 @@
       placeholder="Your password"
       id=""
       class="__form_field __form_password"
+      [(ngModel)]="userPassword"
+      (keyup)="namePasswordVerify(2)"
     />
     <div class="__forgot_remember">
       <p>
@@ -32,7 +36,7 @@
         </span>
       </p>
     </div>
-    <button type="submit" class="__form_field __form_submit">LOGIN</button>
+    <button type="submit" class="__form_field __form_submit" (click)="onSubmit()">LOGIN</button>
     <p class="__or_seperator">- or -</p>
     <div class="__social_login_container">
       <p class="__social_title">Sign in with</p>

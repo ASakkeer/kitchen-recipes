@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class LoginRegisterComponent implements OnInit {
 
   rememberChecked;
+  userName;
+  userPassword;
 
   constructor() {
-    this.rememberChecked = false
+    this.rememberChecked = false;
+    this.userName = '';
+    this.userPassword = '';
   }
 
   ngOnInit(): void {
@@ -18,6 +22,14 @@ export class LoginRegisterComponent implements OnInit {
 
   rememberClick() {
     this.rememberChecked = !this.rememberChecked;
+  }
+
+  namePasswordVerify(field) {
+    console.log(field)
+  }
+
+  onSubmit() {
+    console.log(this.userName, this.userPassword)
   }
 
 }

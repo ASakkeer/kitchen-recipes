@@ -13,6 +13,7 @@ import { MaterialModule } from './material';
 // Import library module
 import { NgxSpinnerModule } from "ngx-spinner";
 import { LoginRegisterComponent } from './components/login-register/login-register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,17 @@ import { LoginRegisterComponent } from './components/login-register/login-regist
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     NgxSpinnerModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent],
   exports: [
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class AppModule { }

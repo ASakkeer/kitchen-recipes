@@ -72,6 +72,13 @@ $loginWhiteTransparent: rgb(255 255 255 / 12%);
   box-shadow: 5px 5px 10px #334290;
 }
 
+.__form_container {
+  align-items: $centerValue;
+  display: $flexValue;
+  justify-content: $centerValue;
+  flex-direction: $columnValue;
+}
+
 .__form_field {
   width: 300px;
   padding: 15px;

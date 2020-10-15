@@ -1,3 +1,5 @@
+// c2f0dc - Ligth Green
+// 4a6076 - Dark Blue
 // common values
 $centerValue: center;
 $autoValue: auto;
@@ -47,7 +49,7 @@ $Percent75Value: 75%;
 $Percent100Value: 100%;
 
 // colors
-$baseAppColor: #3f51b5;
+$baseAppColor: #4a6076;
 $whiteValue: #fff;
 $loginWhiteTransparent: rgb(255 255 255 / 12%);
 
@@ -55,7 +57,14 @@ $loginWhiteTransparent: rgb(255 255 255 / 12%);
   background-color: $baseAppColor;
   height: $Percent100Value;
   display: $flexValue;
+  background-image: url('../../../assets/images/ShoppiiieeBI.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+// .__Login_logo {
+
+// }
 
 .__login_reg_container {
   min-width: $Pix100Value + $Pix100Value + $Pix100Value;
@@ -68,8 +77,8 @@ $loginWhiteTransparent: rgb(255 255 255 / 12%);
   justify-content: $centerValue;
   flex-direction: $columnValue;
   padding: 20px;
-  color: white;
-  box-shadow: 5px 5px 10px #334290;
+  color: #c2f0dc;
+  box-shadow: 5px 5px 5px #405367;
 }
 
 .__form_container {
@@ -84,10 +93,10 @@ $loginWhiteTransparent: rgb(255 255 255 / 12%);
   padding: 15px;
   border-radius: 100px;
   background-color: white;
-  border: 1px solid #6b7ac7;
-  box-shadow: 0px 3px 10px #3f51b5;
+  border: 1px solid #c2f0dc;
+  box-shadow: 0px 3px 5px #405367;
   margin-bottom: 10px;
-  color: #3f51b5;
+  color: #4a6076;
   outline: none;
   text-align: center;
   -webkit-transition: all 0.15s ease-out;
@@ -143,7 +152,7 @@ span.__remember_container span {
 }
 
 input.__form_field:focus {
-  box-shadow: 0px 3px 20px #314098;
+  box-shadow: 0px 5px 10px #405367;
   width: 320px;
   -webkit-transition: all 0.15s ease-out;
   -moz-transition: all 0.15s ease-out;

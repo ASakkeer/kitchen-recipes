@@ -1,0 +1,76 @@
+{
+  "configVersion": 1,
+  "timestamp": 1602772612760,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.c8c5eb4d5baa344d7e4f.js",
+        "/manifest.webmanifest",
+        "/polyfills.35a5ca1855eb057f016a.js",
+        "/runtime.acf0dec4155e77772545.js",
+        "/styles.85b48c70a667f666004e.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/ShoppiiieeBI.14bd16f6470f205539ea.jpg",
+        "/assets/icons/facebook_login.png",
+        "/assets/icons/google_login.png",
+        "/assets/images/ShoppiiieeBI.jpg",
+        "/assets/images/ShoppiiieeBI_001.jpg",
+        "/assets/images/myBL.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/ShoppiiieeBI.14bd16f6470f205539ea.jpg": "59880e525907b1990e13102fb99d0854e844c7e2",
+    "/assets/icons/facebook_login.png": "2e0acd4149586bb88fd00f5d6028e0920ce60cab",
+    "/assets/icons/google_login.png": "124be173c110206ba06e80b272294787e96a431c",
+    "/assets/images/ShoppiiieeBI.jpg": "59880e525907b1990e13102fb99d0854e844c7e2",
+    "/assets/images/ShoppiiieeBI_001.jpg": "f2bd09cce29d9760cadac89d05286c2de52e5dde",
+    "/assets/images/myBL.jpg": "65a9b650d00dcec2349801fd5afa1b4b9f686597",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "a07a812d265a4d9745dceccb4792d1d3aeb1127c",
+    "/main.c8c5eb4d5baa344d7e4f.js": "185c381fd02aa18d538dac4af2fe5127a2d385b3",
+    "/manifest.webmanifest": "9f85041d385aa85f18e9f695b15a51982f29de03",
+    "/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
+    "/runtime.acf0dec4155e77772545.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/styles.85b48c70a667f666004e.css": "7062cc13948501db322eba8fa2ce40386f4c604e"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

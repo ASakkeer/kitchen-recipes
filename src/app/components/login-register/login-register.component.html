@@ -1,38 +1,18 @@
-<div class="__login_layout">
+<!-- Login Layout -->
+<div class="__login_layout" *ngIf="isLoginScreen">
   <div class="__login_reg_container __form_container">
     <h2 class="__Login_title"><b>Login</b></h2>
-    <!-- <img src="../../../assets/images/myBL.jpg" alt="" class="__Login_logo"> -->
-    <div class="__error_message">Please enter valid credentials.</div>
-    <input
-      type="text"
-      name=""
-      placeholder="Your username" 
-      id=""
-      class="__form_field __form_username"
-      [(ngModel)]="userName"
-      (keyup)="namePasswordVerify(1)"
-    />
-    <input
-      type="password"
-      name=""
-      placeholder="Your password"
-      id=""
-      class="__form_field __form_password"
-      [(ngModel)]="userPassword"
-      (keyup)="namePasswordVerify(2)"
-    />
+    <!-- <div class="__error_message">Please enter valid credentials.</div> -->
+    <input type="text" name="" placeholder="Your username" id="" class="__form_field __form_username"
+      [(ngModel)]="userName" (keyup)="namePasswordVerify(1)" />
+    <input type="password" name="" placeholder="Your password" id="" class="__form_field __form_password"
+      [(ngModel)]="userPassword" (keyup)="namePasswordVerify(2)" />
     <div class="__forgot_remember">
       <p>
         <span>Forgot password?</span>
         <span class="__remember_container">
-          <span
-            ><input
-              type="checkbox"
-              (change)="rememberChecked = !rememberChecked"
-              [checked]="rememberChecked"
-              name=""
-              id=""
-          /></span>
+          <span><input type="checkbox" (change)="rememberChecked = !rememberChecked" [checked]="rememberChecked" name=""
+              id="" /></span>
           <span (click)="rememberClick()">Remember me</span>
         </span>
       </p>
@@ -43,21 +23,54 @@
       <p class="__social_title">Sign in with</p>
       <div class="__social_icons">
         <p>
-          <img
-            src="../../../assets/icons/facebook_login.png"
-            alt=""
-            class="__social_login __facebook"
-          />
-          <img
-            src="../../../assets/icons/google_login.png"
-            alt=""
-            class="__social_login __google"
-          />
+          <img src="../../../assets/icons/facebook_login.png" alt="" class="__social_login __facebook" />
+          <img src="../../../assets/icons/google_login.png" alt="" class="__social_login __google" />
         </p>
       </div>
     </div>
     <div class="__no_account_container">
-      <p>Don't have an Account? <b>Sign up</b></p>
+      <p>Don't have an Account? &nbsp;<b (click)="changeScreen(1)">Sign up</b></p>
+    </div>
+  </div>
+</div>
+
+<!-- Signup Layout -->
+<div class="__login_layout" *ngIf="!isLoginScreen">
+  <div class="__login_reg_container __form_container">
+    <h2 class="__Login_title"><b>Sign up</b></h2>
+    <!-- <img src="../../../assets/images/myBL.jpg" alt="" class="__Login_logo"> -->
+    <!-- <div class="__error_message">Please enter valid credentials.</div> -->
+    <input type="text" name="" placeholder="Your username" id="" class="__form_field __form_username"
+      [(ngModel)]="userName" (keyup)="namePasswordVerify(1)" />
+    <input type="password" name="" placeholder="Your email" id="" class="__form_field __form_password"
+      [(ngModel)]="userPassword" (keyup)="namePasswordVerify(2)" />
+      <input type="text" name="" placeholder="Your password" id="" class="__form_field __form_username"
+      [(ngModel)]="userName" (keyup)="namePasswordVerify(1)" />
+    <input type="password" name="" placeholder="Your confirm password" id="" class="__form_field __form_password"
+      [(ngModel)]="userPassword" (keyup)="namePasswordVerify(2)" />
+    <!-- <div class="__forgot_remember">
+      <p>
+        <span>Forgot password?</span>
+        <span class="__remember_container">
+          <span><input type="checkbox" (change)="rememberChecked = !rememberChecked" [checked]="rememberChecked" name=""
+              id="" /></span>
+          <span (click)="rememberClick()">Remember me</span>
+        </span>
+      </p>
+    </div> --><br>
+    <button type="submit" class="__form_field __form_submit" (click)="onSubmit()">SIGNUP</button>
+    <p class="__or_seperator">- or -</p>
+    <div class="__social_login_container">
+      <p class="__social_title">Sign in with</p>
+      <div class="__social_icons">
+        <p>
+          <img src="../../../assets/icons/facebook_login.png" alt="" class="__social_login __facebook" />
+          <img src="../../../assets/icons/google_login.png" alt="" class="__social_login __google" />
+        </p>
+      </div>
+    </div>
+    <div class="__no_account_container">
+      <p>Already have an Account? &nbsp;<b (click)="changeScreen(2)">Login</b></p>
     </div>
   </div>
 </div>

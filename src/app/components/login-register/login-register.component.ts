@@ -10,6 +10,7 @@ export class LoginRegisterComponent implements OnInit {
   rememberChecked;
   userName;
   userPassword;
+  isLoginScreen = true;
 
   constructor() {
     this.rememberChecked = false;
@@ -30,6 +31,14 @@ export class LoginRegisterComponent implements OnInit {
 
   onSubmit() {
     console.log(this.userName, this.userPassword)
+  }
+
+  changeScreen(screenValue) {
+    if (screenValue === 1) {
+      this.isLoginScreen = false;
+    } else {
+      this.isLoginScreen = true;
+    }
   }
 
 }

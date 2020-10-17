@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1602919768452,
+  "timestamp": 1602957489351,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.4a04f9b73cc297643bbe.js",
+        "/main.c541309ce4eb89503350.js",
         "/manifest.webmanifest",
         "/polyfills.35a5ca1855eb057f016a.js",
         "/runtime.acf0dec4155e77772545.js",
@@ -35,6 +35,7 @@
         "/assets/images/ShoppiiieeBI.jpg",
         "/assets/images/ShoppiiieeBI_001.jpg",
         "/assets/images/favicon.jpg",
+        "/assets/images/favicon.png",
         "/assets/images/logo.png",
         "/assets/images/myBL.jpg",
         "/assets/images/myBL.png"
@@ -50,13 +51,14 @@
     "/assets/images/ShoppiiieeBI.jpg": "59880e525907b1990e13102fb99d0854e844c7e2",
     "/assets/images/ShoppiiieeBI_001.jpg": "f2bd09cce29d9760cadac89d05286c2de52e5dde",
     "/assets/images/favicon.jpg": "3c121497a33f872e7cf78b8c11eccb91804c6b24",
+    "/assets/images/favicon.png": "b5f1eb71e6511a0076b61cdca138bc74b5bb2912",
     "/assets/images/logo.png": "45813d5987a3e5aa1e90c9ae135b4f54062b3ef1",
     "/assets/images/myBL.jpg": "65a9b650d00dcec2349801fd5afa1b4b9f686597",
     "/assets/images/myBL.png": "8f7d178457b0d30c4fe201a7cad026012a66eca6",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/index.html": "0b43dc7c0947b37138a742ee1723bb13e91945d7",
-    "/main.4a04f9b73cc297643bbe.js": "32a528712709c100f7823e590f744f18337d7df9",
-    "/manifest.webmanifest": "9f85041d385aa85f18e9f695b15a51982f29de03",
+    "/index.html": "bb70dd3141b23a07a03ba1f742febd4040e36460",
+    "/main.c541309ce4eb89503350.js": "1453da6f5eeff43f147a280bfe548bd2a45ca08b",
+    "/manifest.webmanifest": "3865302bbd0410b073284dc0ab1ae4307a8c584f",
     "/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
     "/runtime.acf0dec4155e77772545.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/styles.85b48c70a667f666004e.css": "7062cc13948501db322eba8fa2ce40386f4c604e"

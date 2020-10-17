@@ -14,12 +14,14 @@ import { MaterialModule } from './material';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { LoginRegisterComponent } from './components/login-register/login-register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalWindowComponent } from './components/modal-window/modal-window.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoaderComponent,
-    LoginRegisterComponent
+    LoginRegisterComponent,
+    ModalWindowComponent
   ],
   imports: [
     BrowserModule,

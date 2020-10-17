@@ -1,23 +1,24 @@
-<!-- Login Layout -->
-<div class="__login_layout" *ngIf="isLoginScreen">
-  <div class="__login_reg_container __form_container">
+<div class="__login_layout" rows="*">
+  <div *ngIf="isLoginScreen && !isForgotScreen"  class="__login_reg_container __form_container">
     <h2 class="__Login_title"><b>Login</b></h2>
-    <!-- <div class="__error_message">Please enter valid credentials.</div> -->
-    <input type="text" name="" placeholder="Your username" id="" class="__form_field __form_username"
-      [(ngModel)]="userName" (keyup)="namePasswordVerify(1)" />
+    <div class="__error_message" *ngIf="loginData && loginData.username === '' && displayError === true">Please enter your username</div>
+    <input type="text" name="" placeholder="Your username" id="_loginUsername" class="__form_field __form_username __showBorderError"
+      [(ngModel)]="loginData.username" (keyup)="namePasswordVerify(1)" />
+    <div class="__error_message" *ngIf="loginData && loginData.password === '' && displayError === true">Please enter valid email address</div>
     <input type="password" name="" placeholder="Your password" id="" class="__form_field __form_password"
-      [(ngModel)]="userPassword" (keyup)="namePasswordVerify(2)" />
+      [(ngModel)]="loginData.password" (keyup)="namePasswordVerify(2)" />
     <div class="__forgot_remember">
       <p>
-        <span>Forgot password?</span>
+        <span (click)="changeScreen(3)">Forgot password?</span>
         <span class="__remember_container">
-          <span><input type="checkbox" (change)="rememberChecked = !rememberChecked" [checked]="rememberChecked" name=""
-              id="" /></span>
+          <span><input type="checkbox" (change)="loginData.remember_me = !loginData.remember_me"
+              [checked]="loginData.remember_me" name="" id="" /></span>
           <span (click)="rememberClick()">Remember me</span>
         </span>
       </p>
     </div>
-    <button type="submit" class="__form_field __form_submit" (click)="onSubmit()">LOGIN</button>
+    <button [disabled]="loginData.username === '' || loginData.password === ''" type="submit"
+      class="__form_field __form_submit" (click)="onSubmit(1)">LOGIN</button>
     <p class="__or_seperator">- or -</p>
     <div class="__social_login_container">
       <p class="__social_title">Sign in with</p>
@@ -32,33 +33,25 @@
       <p>Don't have an Account? &nbsp;<b (click)="changeScreen(1)">Sign up</b></p>
     </div>
   </div>
-</div>
 
-<!-- Signup Layout -->
-<div class="__login_layout" *ngIf="!isLoginScreen">
-  <div class="__login_reg_container __form_container">
+  <div *ngIf="!isLoginScreen && !isForgotScreen" class="__login_reg_container __form_container">
     <h2 class="__Login_title"><b>Sign up</b></h2>
-    <!-- <img src="../../../assets/images/myBL.jpg" alt="" class="__Login_logo"> -->
-    <!-- <div class="__error_message">Please enter valid credentials.</div> -->
+    <div class="__error_message">Please enter your username</div>
     <input type="text" name="" placeholder="Your username" id="" class="__form_field __form_username"
-      [(ngModel)]="userName" (keyup)="namePasswordVerify(1)" />
-    <input type="password" name="" placeholder="Your email" id="" class="__form_field __form_password"
-      [(ngModel)]="userPassword" (keyup)="namePasswordVerify(2)" />
-      <input type="text" name="" placeholder="Your password" id="" class="__form_field __form_username"
-      [(ngModel)]="userName" (keyup)="namePasswordVerify(1)" />
+      [(ngModel)]="signUpData.username" (keyup)="namePasswordVerify(1)" />
+    <div class="__error_message">Please enter valid email address</div>
+    <input type="email" name="" placeholder="Your email" id="" class="__form_field __form_password"
+      [(ngModel)]="signUpData.email" (keyup)="namePasswordVerify(2)" />
+      <div class="__error_message">Please enter your password</div>
+    <input type="password" name="" placeholder="Your password" id="" class="__form_field __form_username"
+      [(ngModel)]="signUpData.password" (keyup)="namePasswordVerify(1)" />
+      <div class="__error_message">Password does not match</div>
     <input type="password" name="" placeholder="Your confirm password" id="" class="__form_field __form_password"
-      [(ngModel)]="userPassword" (keyup)="namePasswordVerify(2)" />
-    <!-- <div class="__forgot_remember">
-      <p>
-        <span>Forgot password?</span>
-        <span class="__remember_container">
-          <span><input type="checkbox" (change)="rememberChecked = !rememberChecked" [checked]="rememberChecked" name=""
-              id="" /></span>
-          <span (click)="rememberClick()">Remember me</span>
-        </span>
-      </p>
-    </div> --><br>
-    <button type="submit" class="__form_field __form_submit" (click)="onSubmit()">SIGNUP</button>
+      [(ngModel)]="signUpData.confirm_password" (keyup)="namePasswordVerify(2)" />
+    <br>
+    <button [disabled]="signUpData.username === '' || signUpData.email === '' ||
+    signUpData.password === '' || signUpData.confirm_password === ''" type="submit" class="__form_field __form_submit"
+      (click)="onSubmit(2)">SIGNUP</button>
     <p class="__or_seperator">- or -</p>
     <div class="__social_login_container">
       <p class="__social_title">Sign in with</p>
@@ -71,6 +64,23 @@
     </div>
     <div class="__no_account_container">
       <p>Already have an Account? &nbsp;<b (click)="changeScreen(2)">Login</b></p>
+    </div>
+  </div>
+
+  <div *ngIf="isForgotScreen" class="__login_reg_container __form_container">
+    <h2 class="__Login_title"><b>Forgot Password</b></h2>
+    <div class="__error_message">Please enter valid email address</div>
+    <input type="text" name="" placeholder="Your email" id="" class="__form_field __form_username"
+      [(ngModel)]="forgotData.email" (keyup)="namePasswordVerify(1)" />
+    <br />
+    <button [disabled]="forgotData.email === ''" type="submit" class="__form_field __form_submit"
+      (click)="onSubmit(3)">SUBMIT</button>
+    <div class="__no_account_container">
+      <p>
+        <span (click)="changeScreen(1)">Sign up</span>
+        <span class="__or_seperator">- or -</span>
+        <span (click)="changeScreen(2)">Login</span>
+      </p>
     </div>
   </div>
 </div>

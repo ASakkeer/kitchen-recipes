@@ -128,11 +128,13 @@ export class LoginRegisterComponent implements OnInit {
   signUpData;
   forgotData;
   displayError = false;
+  invalidEmail = false;
 
   constructor() {
     this.isLoginScreen = true;
     this.isForgotScreen = false;
     this.displayError = false;
+    this.invalidEmail = false;
 
     this.loginData = {
       username: '',
@@ -158,24 +160,58 @@ export class LoginRegisterComponent implements OnInit {
   }
 
   namePasswordVerify(field) {
-    console.log(field);
+    // console.log(field);
   }
 
-  onSubmit(checkSubmit) {
+  async onSubmit(checkSubmit) {
+    this.displayError = false;
     if (checkSubmit === 1) {
       if (this.loginData.username !== '' && this.loginData.password !== '') {
+        this.invalidEmail = false;
         console.log(this.loginData);
+      } else {
+        this.displayError = true;
       }
     } else if (checkSubmit === 2) {
       if (this.signUpData.username !== '' && this.signUpData.email !== '' &&
         this.signUpData.password !== '' && this.signUpData.confirm_password !== '') {
-        console.log(this.signUpData);
+        const verifyEmail = await this.validateEmail(this.signUpData.email);
+        if (verifyEmail) {
+          this.invalidEmail = false;
+          if (this.signUpData.password !== this.signUpData.confirm_password) {
+            this.displayError = true;
+            this.signUpData.confirm_password = '';
+          } else {
+            console.log(this.signUpData);
+          }
+        } else {
+          this.signUpData.password = '';
+          this.signUpData.confirm_password = '';
+          this.invalidEmail = true;
+          this.displayError = true;
+        }
+      } else {
+        this.displayError = true;
       }
     } else if (checkSubmit === 3) {
       if (this.forgotData.email !== '') {
-        console.log(this.forgotData);
+        const verifyEmail = await this.validateEmail(this.forgotData.email);
+        if (verifyEmail) {
+          this.invalidEmail = false;
+          console.log(this.forgotData);
+        } else {
+          this.invalidEmail = true;
+          this.displayError = true;
+        }
+      } else {
+        this.displayError = true;
       }
     }
+  }
+
+  validateEmail(email) {
+    const emailTest = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return emailTest.test(email);
   }
 
   changeScreen(screenValue) {

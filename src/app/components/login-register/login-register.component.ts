@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ɵROUTER_PROVIDERS } from '@angular/router';
 
 import {
   bounceAnimation, flashAnimation, pulseAnimation, rubberBandAnimation, shakeAnimation,
@@ -24,6 +25,7 @@ import {
   collapseAnimation, collapseHorizontallyAnimation, rotateAnimation,
   bounceInUpOnEnterAnimation, hueRotateAnimation
 } from 'angular-animations';
+import { ModalWindowComponent } from '../modal-window/modal-window.component';
 
 @Component({
   selector: 'app-login-register',
@@ -118,6 +120,9 @@ import {
     rotateAnimation({ anchor: 'enter85', degrees: 90 }),
     hueRotateAnimation({ anchor: 'enter86' }),
     hueRotateAnimation({ anchor: 'enter87', duration: 20000 })
+  ],
+  providers: [
+    ɵROUTER_PROVIDERS
   ]
 })
 export class LoginRegisterComponent implements OnInit {

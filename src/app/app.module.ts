@@ -39,7 +39,8 @@ import { ModalWindowComponent } from './components/modal-window/modal-window.com
   exports: [
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ModalWindowComponent
   ]
 })
 export class AppModule { }

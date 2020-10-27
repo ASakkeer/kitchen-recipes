@@ -40,7 +40,8 @@ import { ModalWindowComponent } from './components/modal-window/modal-window.com
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    ModalWindowComponent
+    ModalWindowComponent,
+    NgxSpinnerModule
   ]
 })
 export class AppModule { }

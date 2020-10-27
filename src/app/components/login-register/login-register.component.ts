@@ -25,7 +25,6 @@ import {
   collapseAnimation, collapseHorizontallyAnimation, rotateAnimation,
   bounceInUpOnEnterAnimation, hueRotateAnimation
 } from 'angular-animations';
-import { ModalWindowComponent } from '../modal-window/modal-window.component';
 
 @Component({
   selector: 'app-login-register',

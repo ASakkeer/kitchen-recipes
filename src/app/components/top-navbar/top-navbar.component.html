@@ -1,0 +1,88 @@
+<div class="__navbar_container">
+    <div class="nav_layout_one">
+        <div class="__navemenu_iconlogo">
+            <button mat-mini-fab color="white" aria-label="Example icon button with a heart icon" (click)="showSidenav = true">
+                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">menu_open
+                </mat-icon>
+            </button>
+            <img src="../../../assets/images/logo.png" alt="">
+        </div>
+        <div class="__search_container">
+            <input type="text" class="__search_box" placeholder="Find your product here">
+            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">search
+            </mat-icon>
+        </div>
+        <div class="__cart_container">
+            <p>
+                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">person_pin
+                </mat-icon>
+                <span>Your account</span>
+                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">expand_more
+                </mat-icon>
+            </p>
+            <p>
+                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">language
+                </mat-icon>
+                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">expand_more
+                </mat-icon>
+            </p>
+            <p>
+                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">shopping_cart
+                </mat-icon>
+                <span>Your cart</span>
+                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">expand_more
+                </mat-icon>
+            </p>
+        </div>
+    </div>
+    <div class="nav_layout_two">
+        <div class="__pincode_container">
+            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">room
+            </mat-icon>
+            <span>Find your address here</span>
+        </div>
+        <div class="__static_menu">
+            <ul class="__static_menu_ul">
+                <li class="__static_menu_li">
+                    Electronics
+                </li>
+                <li class="__static_menu_li">
+                    Home & Furniture
+                </li>
+                <li class="__static_menu_li">
+                    Men
+                </li>
+                <li class="__static_menu_li">
+                    Women
+                </li>
+                <li class="__static_menu_li">
+                    Baby & Kids
+                </li>
+                <li class="__static_menu_li">
+                    Sports & Books
+                </li>
+                <li class="__static_menu_li">
+                    Today's Deals
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="__sidenav_container" *ngIf="showSidenav">
+    <div class="__sidenav" [@enter1111]>
+        <ul>
+            <li>Start</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
+            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
+            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
+            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
+            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
+            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
+            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
+            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
+            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
+            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>End</li>
+        </ul>
+    </div>
+    <div class="__sidenav_overlay" (click)="showSidenav = false"></div>
+</div>

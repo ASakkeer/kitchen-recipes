@@ -1,0 +1,143 @@
+.__navemenu_iconlogo img {
+  height: 50px;
+  margin-left: 10px;
+}
+
+// .__navemenu_iconlogo mat-icon:hover {
+//   cursor: pointer;
+// }
+
+.nav_layout_one {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid rgb(74 96 118 / 22%);
+}
+
+.__navemenu_iconlogo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.__search_container {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.__search_container .__search_box {
+  width: 80%;
+  padding: 10px 20px;
+  border: 1px solid #4a6076;
+  border-radius: 50px 0 0 50px;
+  outline: none;
+}
+
+.__search_container mat-icon {
+  background: #4a6076;
+  padding: 21px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 50px 50px 0;
+  color: white;
+  cursor: pointer;
+}
+
+.__cart_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 40%;
+}
+
+.__cart_container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.__cart_container p {
+  margin: 0;
+  padding: 10px;
+  color: #4a6076;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.nav_layout_two {
+  background: #4a6076;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.__pincode_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.__static_menu .__static_menu_ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+li.__static_menu_li {
+  padding: 10px 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+li.__static_menu_li:hover {
+  padding: 10px 15px;
+  cursor: pointer;
+  background: #3d5063;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.__sidenav_container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: transparent;
+}
+
+.__sidenav_overlay {
+  position: fixed;
+  background: rgb(0 0 0 / 60%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.__sidenav {
+  width: 300px;
+  background: white;
+  height: 100%;
+  z-index: 4;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}

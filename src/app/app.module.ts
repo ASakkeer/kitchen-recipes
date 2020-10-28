@@ -15,13 +15,15 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { LoginRegisterComponent } from './components/login-register/login-register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalWindowComponent } from './components/modal-window/modal-window.component';
+import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoaderComponent,
     LoginRegisterComponent,
-    ModalWindowComponent
+    ModalWindowComponent,
+    TopNavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,9 @@ import { ModalWindowComponent } from './components/modal-window/modal-window.com
     ReactiveFormsModule,
     FormsModule,
     ModalWindowComponent,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    LoaderComponent,
+    TopNavbarComponent
   ]
 })
 export class AppModule { }

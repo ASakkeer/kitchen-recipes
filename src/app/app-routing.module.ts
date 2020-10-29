@@ -4,12 +4,13 @@ import { LoginRegisterComponent } from './components/login-register/login-regist
 import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
 
 const routes: Routes = [
-  { path: 'home', component: TopNavbarComponent },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
-  }
+  },
+  { path: 'login', component: LoginRegisterComponent },
+  { path: 'home', component: TopNavbarComponent },
 ];
 
 @NgModule({

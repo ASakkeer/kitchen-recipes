@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ɵROUTER_PROVIDERS } from '@angular/router';
+// import { ɵROUTER_PROVIDERS } from '@angular/router';
 
 import {
   bounceAnimation, flashAnimation, pulseAnimation, rubberBandAnimation, shakeAnimation,
@@ -122,7 +122,7 @@ import {
     hueRotateAnimation({ anchor: 'enter87', duration: 20000 })
   ],
   providers: [
-    ɵROUTER_PROVIDERS
+    // ɵROUTER_PROVIDERS
   ]
 })
 export class TopNavbarComponent implements OnInit {

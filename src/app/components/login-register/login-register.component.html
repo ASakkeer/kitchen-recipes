@@ -1,9 +1,8 @@
-<!-- <app-modal-window></app-modal-window> -->
-<!-- <app-loader></app-loader> -->
-<!-- <app-top-navbar></app-top-navbar> -->
+<!-- <app-loader *ngIf="showSpinner"></app-loader> -->
 <div class="__login_layout" rows="*">
   <div *ngIf="isLoginScreen && !isForgotScreen"  class="__login_reg_container __form_container">
     <h2 class="__Login_title"><b>Login</b></h2>
+    <p>admin - admin123</p>
     <div class="__error_message" *ngIf="loginData && loginData.username === '' && displayError === true">Please enter your username</div>
     <input type="text" name="" placeholder="Your username" id="_loginUsername" class="__form_field __form_username __showBorderError"
       [(ngModel)]="loginData.username" (keyup)="namePasswordVerify(1)" />

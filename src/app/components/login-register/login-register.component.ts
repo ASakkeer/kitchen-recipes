@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ɵROUTER_PROVIDERS } from '@angular/router';
+import { /* ɵROUTER_PROVIDERS, */ Router } from '@angular/router';
 
 import {
   bounceAnimation, flashAnimation, pulseAnimation, rubberBandAnimation, shakeAnimation,
@@ -121,7 +121,7 @@ import {
     hueRotateAnimation({ anchor: 'enter87', duration: 20000 })
   ],
   providers: [
-    ɵROUTER_PROVIDERS
+    // ɵROUTER_PROVIDERS
   ]
 })
 export class LoginRegisterComponent implements OnInit {
@@ -133,12 +133,14 @@ export class LoginRegisterComponent implements OnInit {
   forgotData;
   displayError = false;
   invalidEmail = false;
+  showSpinner = false;
 
-  constructor() {
+  constructor(private router: Router) {
     this.isLoginScreen = true;
     this.isForgotScreen = false;
     this.displayError = false;
     this.invalidEmail = false;
+    this.showSpinner = false;
 
     this.loginData = {
       username: '',
@@ -172,6 +174,15 @@ export class LoginRegisterComponent implements OnInit {
     if (checkSubmit === 1) {
       if (this.loginData.username !== '' && this.loginData.password !== '') {
         this.invalidEmail = false;
+        if (this.loginData.username === 'admin' && this.loginData.password === 'admin123') {
+          // this.showSpinner = true;
+          // setTimeout(() => {
+          //   this.showSpinner = false;
+          this.router.navigate(['home']);
+          // }, 2000)
+        } else {
+          this.loginData.password = '';
+        }
         console.log(this.loginData);
       } else {
         this.displayError = true;

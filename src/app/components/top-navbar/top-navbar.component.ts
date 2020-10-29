@@ -33,7 +33,6 @@ import {
   styleUrls: ['./top-navbar.component.scss'],
   animations: [
     bounceInUpOnEnterAnimation({ anchor: 'enter1' }),
-    slideInLeftOnEnterAnimation({ anchor: 'enter1111' }),
     bounceInUpOnEnterAnimation({ anchor: 'enter2', delay: 100 }),
     bounceInUpOnEnterAnimation({ anchor: 'enter3', delay: 200 }),
     bounceAnimation({ anchor: 'enter4', delay: 2000 }),
@@ -93,7 +92,7 @@ import {
     rotateOutUpLeftAnimation({ anchor: 'enter58' }),
     rotateOutUpRightAnimation({ anchor: 'enter59' }),
     slideInDownAnimation({ anchor: 'enter60' }),
-    // slideInLeftAnimation({ anchor: 'enter61' }),
+    slideInLeftOnEnterAnimation({ anchor: 'enter61', duration: 200 }),
     slideInRightAnimation({ anchor: 'enter62' }),
     slideInUpAnimation({ anchor: 'enter63' }),
     slideOutDownAnimation({ anchor: 'enter64' }),

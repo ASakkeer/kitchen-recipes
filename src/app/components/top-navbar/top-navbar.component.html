@@ -8,29 +8,134 @@
             <img src="../../../assets/images/logo.png" alt="">
         </div>
         <div class="__search_container">
-            <input type="text" class="__search_box" placeholder="Find your product here">
+            <input type="text" class="__search_box" spellcheck="false" placeholder="Find your product here">
             <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">search
             </mat-icon>
         </div>
         <div class="__cart_container">
-            <p>
+            <p class="__nav_res_login">
+                <button type="submit" class="__form_field __btns __loginBtn">LOGIN</button>
+            </p>
+            <p [matMenuTriggerFor]="yourAccount" class="__nav_res_menu">
                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">person_pin
                 </mat-icon>
                 <span>Your account</span>
                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">expand_more
                 </mat-icon>
             </p>
-            <p>
+            <p [matMenuTriggerFor]="yourAccount" class="__nav_res_menu_show">
+                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">person_pin
+                </mat-icon>
+            </p>
+            <mat-menu #yourAccount="matMenu">
+                <div class="__ya_constainer">
+                    <div class="__ya_signin_login">
+                        <button type="submit" class="__form_field __btns __loginBtn">LOGIN</button>
+                        <p>Not a customer? &nbsp; <span>Signup immediately</span></p>
+                    </div>
+                    <hr />
+                    <div class="__ya_menus">
+                        <ul>
+                            <li>
+                                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">account_circle
+                                </mat-icon>
+                                <span>Your Account</span>
+                            </li>
+                            <li>
+                                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">list_alt
+                                </mat-icon>
+                                <span>Your Orders</span>
+                            </li>
+                            <li>
+                                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">favorite_border
+                                </mat-icon>
+                                <span>Your Wish List</span>
+                            </li>
+                            <li>
+                                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">card_giftcard
+                                </mat-icon>
+                                <span>Rewards & Gift Cards</span>
+                            </li>
+                            <li>
+                                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">monetization_on
+                                </mat-icon>
+                                <span>Sell With Shoppiiiee</span>
+                            </li>
+                            <li>
+                                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">settings
+                                </mat-icon>
+                                <span>Settings</span>
+                            </li>
+                            <li>
+                                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">get_app
+                                </mat-icon>
+                                <span>Download App</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </mat-menu>
+            <!-- <p [matMenuTriggerFor]="yourLanguage">
                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">language
                 </mat-icon>
                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">expand_more
                 </mat-icon>
             </p>
-            <p>
+            <mat-menu #yourLanguage="matMenu">
+                <div class="__yl_constainer">
+                    <div class="__yl_signin_login">
+                        <button type="submit" class="__form_field __btns __loginBtn">LOGIN</button>
+                        <p>Not a customer? &nbsp; <span>Signup immediately</span></p>
+                    </div>
+                    <hr />
+                    <div class="__yl_menus">
+                        <ul>
+                            <li>
+                                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">account_circle
+                                </mat-icon>
+                                <span>Your Account</span>
+                            </li>
+                            <li>
+                                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">list_alt
+                                </mat-icon>
+                                <span>Your Orders</span>
+                            </li>
+                            <li>
+                                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">favorite_border
+                                </mat-icon>
+                                <span>Your Wish List</span>
+                            </li>
+                            <li>
+                                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">card_giftcard
+                                </mat-icon>
+                                <span>Rewards & Gift Cards</span>
+                            </li>
+                            <li>
+                                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">monetization_on
+                                </mat-icon>
+                                <span>Sell With Shoppiiiee</span>
+                            </li>
+                            <li>
+                                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">settings
+                                </mat-icon>
+                                <span>Settings</span>
+                            </li>
+                            <li>
+                                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">get_app
+                                </mat-icon>
+                                <span>Download App</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </mat-menu> -->
+            <p class="__nav_res_menu">
                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">shopping_cart
                 </mat-icon>
                 <span>Your cart</span>
-                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">expand_more
+            </p>
+            <p class="__nav_res_menu_show">
+                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">shopping_cart
                 </mat-icon>
             </p>
         </div>
@@ -67,10 +172,17 @@
             </ul>
         </div>
     </div>
+    <div class="nav_layout_three">
+        <div class="__search_container1">
+            <input type="text" class="__search_box" spellcheck="false" placeholder="Find your product here">
+            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">search
+            </mat-icon>
+        </div>
+    </div>
 </div>
 
 <div class="__sidenav_container" *ngIf="showSidenav">
-    <div class="__sidenav" [@enter1111]>
+    <div class="__sidenav" [@enter61]>
         <ul>
             <li>Start</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
             <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>

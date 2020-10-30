@@ -1,0 +1,89 @@
+<app-loader *ngIf="showSpinner"></app-loader>
+<!-- <app-top-navbar></app-top-navbar> -->
+<div class="__login_layout" rows="*">
+  <div *ngIf="isLoginScreen && !isForgotScreen"  class="__login_reg_container __form_container">
+    <h2 class="__Login_title"><b>Login</b></h2>
+    <p>admin - admin123</p>
+    <div class="__error_message" *ngIf="loginData && loginData.username === '' && displayError === true">Please enter your username</div>
+    <input type="text" name="" placeholder="Your username" id="_loginUsername" class="__form_field __form_username __showBorderError"
+      [(ngModel)]="loginData.username" (keyup)="namePasswordVerify(1)" />
+    <div class="__error_message" *ngIf="loginData && loginData.password === '' && displayError === true">Please enter valid email address</div>
+    <input type="password" name="" placeholder="Your password" id="_loginPassword" class="__form_field __form_password"
+      [(ngModel)]="loginData.password" (keyup)="namePasswordVerify(2)" />
+    <div class="__forgot_remember">
+      <p>
+        <span (click)="changeScreen(3)" class="__hoverUnderline">Forgot password?</span>
+        <span class="__remember_container">
+          <span><input type="checkbox" (change)="loginData.remember_me = !loginData.remember_me"
+              [checked]="loginData.remember_me" name="" id="_loginRememberMe" /></span>
+          <span (click)="rememberClick()">Remember me</span>
+        </span>
+      </p>
+    </div>
+    <button [disabled]="loginData.username === '' || loginData.password === ''" type="submit"
+      class="__form_field __form_submit" (click)="onSubmit(1)">LOGIN</button>
+    <p class="__or_seperator">- or -</p>
+    <div class="__social_login_container">
+      <p class="__social_title">Sign in with</p>
+      <div class="__social_icons">
+        <p>
+          <img src="../../../assets/icons/facebook_login.png" alt="" class="__social_login __facebook" />
+          <img src="../../../assets/icons/google_login.png" alt="" class="__social_login __google" />
+        </p>
+      </div>
+    </div>
+    <div class="__no_account_container">
+      <p>Don't have an Account? &nbsp;<b (click)="changeScreen(1)" class="__hoverUnderline">Sign up</b></p>
+    </div>
+  </div>
+
+  <div *ngIf="!isLoginScreen && !isForgotScreen" class="__login_reg_container __form_container">
+    <h2 class="__Login_title"><b>Sign up</b></h2>
+    <div class="__error_message" *ngIf="signUpData && signUpData.username === '' && displayError === true">Please enter your username</div>
+    <input type="text" name="" placeholder="Your username" id="_signupUsername" class="__form_field __form_username"
+      [(ngModel)]="signUpData.username" (keyup)="namePasswordVerify(1)" />
+    <div class="__error_message" *ngIf="signUpData && signUpData.email === '' && displayError === true || invalidEmail">Please enter valid email address</div>
+    <input type="email" name="" placeholder="Your email" id="_signupEmail" class="__form_field __form_password"
+      [(ngModel)]="signUpData.email" (keyup)="namePasswordVerify(2)" />
+      <div class="__error_message" *ngIf="signUpData && signUpData.password === '' && displayError === true">Please enter your password</div>
+    <input type="password" name="" placeholder="Your password" id="_signupPassword" class="__form_field __form_username"
+      [(ngModel)]="signUpData.password" (keyup)="namePasswordVerify(1)" />
+      <div class="__error_message" *ngIf="signUpData && signUpData.password !== signUpData.confirm_password && displayError === true">Password does not match</div>
+    <input type="password" name="" placeholder="Your confirm password" id="_signupConfirmPassword" class="__form_field __form_password"
+      [(ngModel)]="signUpData.confirm_password" (keyup)="namePasswordVerify(2)" />
+    <br>
+    <button [disabled]="signUpData.username === '' || signUpData.email === '' ||
+    signUpData.password === '' || signUpData.confirm_password === ''" type="submit" class="__form_field __form_submit"
+      (click)="onSubmit(2)">SIGNUP</button>
+    <p class="__or_seperator">- or -</p>
+    <div class="__social_login_container">
+      <p class="__social_title">Sign in with</p>
+      <div class="__social_icons">
+        <p>
+          <img src="../../../assets/icons/facebook_login.png" alt="" class="__social_login __facebook" />
+          <img src="../../../assets/icons/google_login.png" alt="" class="__social_login __google" />
+        </p>
+      </div>
+    </div>
+    <div class="__no_account_container">
+      <p>Already have an Account? &nbsp;<b (click)="changeScreen(2)" class="__hoverUnderline">Login</b></p>
+    </div>
+  </div>
+
+  <div *ngIf="isForgotScreen" class="__login_reg_container __form_container">
+    <h2 class="__Login_title"><b>Forgot Password</b></h2>
+    <div class="__error_message" *ngIf="forgotData && forgotData.email === '' && displayError === true || invalidEmail">Please enter valid email address</div>
+    <input type="text" name="" placeholder="Your email" id="_forgotEmail" class="__form_field __form_username"
+      [(ngModel)]="forgotData.email" (keyup)="namePasswordVerify(1)" />
+    <br />
+    <button [disabled]="forgotData.email === ''" type="submit" class="__form_field __form_submit"
+      (click)="onSubmit(3)">SUBMIT</button>
+    <div class="__no_account_container">
+      <p>
+        <span (click)="changeScreen(1)" class="__hoverUnderline">Sign up</span>
+        <span class="__or_seperator">- or -</span>
+        <span (click)="changeScreen(2)" class="__hoverUnderline">Login</span>
+      </p>
+    </div>
+  </div>
+</div>

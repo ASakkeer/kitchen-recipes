@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginRegisterComponent } from './components/login-register/login-register.component';
-import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
+import { LoginRegisterComponent } from './pages/login-register/login-register.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'login', component: LoginRegisterComponent },
-  { path: 'home', component: TopNavbarComponent },
+  { path: 'home', component: HomepageComponent },
 ];
 
 @NgModule({

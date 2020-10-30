@@ -12,10 +12,11 @@ import { MaterialModule } from './material';
 
 // Import library module
 import { NgxSpinnerModule } from "ngx-spinner";
-import { LoginRegisterComponent } from './components/login-register/login-register.component';
+import { LoginRegisterComponent } from './pages/login-register/login-register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalWindowComponent } from './components/modal-window/modal-window.component';
 import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TopNavbarComponent } from './components/top-navbar/top-navbar.component
     LoaderComponent,
     LoginRegisterComponent,
     ModalWindowComponent,
-    TopNavbarComponent
+    TopNavbarComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,

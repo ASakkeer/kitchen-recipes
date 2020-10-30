@@ -183,18 +183,77 @@
 
 <div class="__sidenav_container" *ngIf="showSidenav">
     <div class="__sidenav" [@enter61]>
-        <ul>
-            <li>Start</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
-            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
-            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
-            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
-            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
-            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
-            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
-            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
-            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li>
-            <li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>Hello</li><li>End</li>
-        </ul>
+        <div class="__sn_header">
+            <h2>
+                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">person_pin
+                </mat-icon>
+                <span>Harry Potter</span>
+            </h2>
+        </div>
+        <div class="__sn_body">
+            <ul class="__sn_m_ul">
+                <li class="__sn_m_li" *ngFor="let mainItem of sidenavData">
+                    <span>{{mainItem.title}}</span>
+                    <ul class="__sn_so_ul">
+                        <li class="__sn_so_li" *ngFor="let subItem of mainItem.lists">
+                            <span>{{subItem.title}}</span>
+                            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">keyboard_arrow_right
+                            </mat-icon>                            
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <hr />
+        <div class="__sn_footer">
+            <ul class="__sn_hd_ul">
+                <li class="__sn_hd_li">
+                    <span>HELP & SETTINGS</span>            
+                    <ul class="__sn_bd_ul">
+                        <li class="__sn_bd_li">
+                            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">list_alt
+                            </mat-icon>   
+                            <span>Your Orders</span>
+                        </li>
+                        <li class="__sn_bd_li">
+                            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">favorite_border
+                            </mat-icon> 
+                            <span>Your Wish List</span>  
+                        </li>
+                        <li class="__sn_bd_li">
+                            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">account_circle
+                            </mat-icon>   
+                            <span>Your Account</span>
+                        </li>
+                        <li class="__sn_bd_li">
+                            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">local_offer
+                            </mat-icon>   
+                            <span>Today's Deals</span>
+                        </li>
+                        <li class="__sn_bd_li">
+                            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">language
+                            </mat-icon>   
+                            <span>Language</span>
+                        </li>
+                        <li class="__sn_bd_li">
+                            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">settings
+                            </mat-icon>   
+                            <span>Settings</span>
+                        </li>
+                        <li class="__sn_bd_li">
+                            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">keyboard_arrow_right
+                            </mat-icon>   
+                            <span>Help & Support</span>
+                        </li>
+                        <li class="__sn_bd_li">
+                            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">get_app
+                            </mat-icon>   
+                            <span>Download App</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="__sidenav_overlay" (click)="showSidenav = false"></div>
 </div>

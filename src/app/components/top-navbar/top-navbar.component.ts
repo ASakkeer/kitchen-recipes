@@ -128,6 +128,232 @@ import {
 export class TopNavbarComponent implements OnInit {
 
   showSidenav = false;
+  sidenavData = [
+    {
+      "_id": "ABC001",
+      "title": "SHOP BY CATEGORY",
+      "lists": [
+        {
+          "_id": "ABC002",
+          "title": "Electronics",
+          "lists": [
+            {
+              "_id": "ABC002",
+              "title": "Mobiles"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Televisions"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Headphones"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Speakers"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Cameras"
+            }
+          ]
+        },
+        {
+          "_id": "ABC003",
+          "title": "Home, Furniture",
+          "lists": [
+            {
+              "_id": "ABC002",
+              "title": "Kitchen Deals"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Indoor & Decorations"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Garden & Outdoor"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Wall Art"
+            }
+          ]
+        },
+        {
+          "_id": "ABC004",
+          "title": "Men's Fashion",
+          "lists": [
+            {
+              "_id": "ABC002",
+              "title": "Clothing"
+            },
+            {
+              "_id": "ABC002",
+              "title": "T-Shirts & Polos"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Shirts"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Innerwear"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Watches"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Bags"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Sunglasses"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Wallets"
+            }
+          ]
+        },
+        {
+          "_id": "ABC005",
+          "title": "Women's Fashion",
+          "lists": [
+            {
+              "_id": "ABC002",
+              "title": "Clothing"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Sarees"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Jean"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Nightwear"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Watches"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Handbags"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Sunglasses"
+            }
+          ]
+        },
+        {
+          "_id": "ABC006",
+          "title": "Baby & Kids",
+          "lists": [
+            {
+              "_id": "ABC002",
+              "title": "Kids Clothing"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Kids Shoes"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Kids Bags"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Kids Watches"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Baby Clothing"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Baby Shoes"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Baby Bags"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Baby Watches"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Toys"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Skin, Health"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Pantry"
+            }
+          ]
+        },
+        {
+          "_id": "ABC007",
+          "title": "Beauty, Health",
+          "lists": [
+            {
+              "_id": "ABC002",
+              "title": "Make-up"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Health & Personal Care"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Beauty & Grooming"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Diet & Nutrition"
+            }
+          ]
+        },
+        {
+          "_id": "ABC008",
+          "title": "Sports, Books",
+          "lists": [
+            {
+              "_id": "ABC002",
+              "title": "Fitness Accessories"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Bats & Balls"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Camping & Hiking"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Textbooks"
+            },
+            {
+              "_id": "ABC002",
+              "title": "Childrens Books"
+            }
+          ]
+        }
+      ]
+    }
+  ];
 
   constructor() {
     this.showSidenav = false;

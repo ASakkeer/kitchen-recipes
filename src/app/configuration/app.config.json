@@ -1,0 +1,8 @@
+{
+    "current_lang": "en",
+    "navbarConfig": {
+        "sidenavIcon": "menu_open",
+        "searchboxIcon": "search",
+        "appLogo": "../../../assets/images/logo.png"
+    }
+}

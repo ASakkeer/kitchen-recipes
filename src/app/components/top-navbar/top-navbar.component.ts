@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 // import { ɵROUTER_PROVIDERS } from '@angular/router';
-
+import Config from '../../configuration/app.config.json';
+import locale from '../../configuration/language/en.json';
 import {
   bounceAnimation, flashAnimation, pulseAnimation, rubberBandAnimation, shakeAnimation,
   swingAnimation, tadaAnimation, wobbleAnimation, jelloAnimation, heartBeatAnimation,
@@ -354,6 +355,8 @@ export class TopNavbarComponent implements OnInit {
       ]
     }
   ];
+  appConfig = Config;
+  defaultLocale = locale;
 
   constructor() {
     this.showSidenav = false;

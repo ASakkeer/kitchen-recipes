@@ -2,24 +2,24 @@
     <div class="nav_layout_one">
         <div class="__navemenu_iconlogo">
             <button mat-mini-fab color="white" aria-label="Example icon button with a heart icon" (click)="showSidenav = true">
-                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">menu_open
+                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">{{appConfig.navbarConfig.sidenavIcon}}
                 </mat-icon>
             </button>
-            <img src="../../../assets/images/logo.png" alt="">
+            <img src="{{appConfig.navbarConfig.appLogo}}" alt="">
         </div>
         <div class="__search_container">
-            <input type="text" class="__search_box" spellcheck="false" placeholder="Find your product here">
-            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">search
+            <input type="text" class="__search_box" spellcheck="false" placeholder="{{defaultLocale.NavSearchboxPlaceholder}}">
+            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">{{appConfig.navbarConfig.searchboxIcon}}
             </mat-icon>
         </div>
         <div class="__cart_container">
             <p class="__nav_res_login">
-                <button type="submit" class="__form_field __btns __loginBtn">LOGIN</button>
+                <button type="submit" class="__form_field __btns __loginBtn">{{defaultLocale.NavLoginCaps}}</button>
             </p>
             <p [matMenuTriggerFor]="yourAccount" class="__nav_res_menu">
                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">person_pin
                 </mat-icon>
-                <span>Your account</span>
+                <span>{{defaultLocale.NavYourAccount}}</span>
                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">expand_more
                 </mat-icon>
             </p>
@@ -30,8 +30,8 @@
             <mat-menu #yourAccount="matMenu">
                 <div class="__ya_constainer">
                     <div class="__ya_signin_login">
-                        <button type="submit" class="__form_field __btns __loginBtn">LOGIN</button>
-                        <p>Not a customer? &nbsp; <span>Signup immediately</span></p>
+                        <button type="submit" class="__form_field __btns __loginBtn">{{defaultLocale.NavLoginCaps}}</button>
+                        <p>{{defaultLocale.NotCustomer}} &nbsp; <span>{{defaultLocale.SignupImmediately}}</span></p>
                     </div>
                     <hr />
                     <div class="__ya_menus">
@@ -39,37 +39,37 @@
                             <li>
                                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">account_circle
                                 </mat-icon>
-                                <span>Your Account</span>
+                                <span>{{defaultLocale.NavOptionAccount}}</span>
                             </li>
                             <li>
                                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">list_alt
                                 </mat-icon>
-                                <span>Your Orders</span>
+                                <span>{{defaultLocale.NavOptionOrder}}</span>
                             </li>
                             <li>
                                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">favorite_border
                                 </mat-icon>
-                                <span>Your Wish List</span>
+                                <span>{{defaultLocale.NavOptionWishlist}}</span>
                             </li>
                             <li>
                                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">card_giftcard
                                 </mat-icon>
-                                <span>Rewards & Gift Cards</span>
+                                <span>{{defaultLocale.NavOptionRewardsGifts}}</span>
                             </li>
                             <li>
                                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">monetization_on
                                 </mat-icon>
-                                <span>Sell With Shoppiiiee</span>
+                                <span>{{defaultLocale.NavOptionSellWith}}</span>
                             </li>
                             <li>
                                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">settings
                                 </mat-icon>
-                                <span>Settings</span>
+                                <span>{{defaultLocale.NavOptionSettings}}</span>
                             </li>
                             <li>
                                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">get_app
                                 </mat-icon>
-                                <span>Download App</span>
+                                <span>{{defaultLocale.NavOptionDownloadApp}}</span>
                             </li>
                         </ul>
                     </div>
@@ -132,7 +132,7 @@
             <p class="__nav_res_menu">
                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">shopping_cart
                 </mat-icon>
-                <span>Your cart</span>
+                <span>{{defaultLocale.NavYourCart}}</span>
             </p>
             <p class="__nav_res_menu_show">
                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">shopping_cart
@@ -144,7 +144,7 @@
         <div class="__pincode_container">
             <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">room
             </mat-icon>
-            <span>Find your address here</span>
+            <span>{{defaultLocale.FindYourAddressHere}}</span>
         </div>
         <div class="__static_menu">
             <ul class="__static_menu_ul">
@@ -208,7 +208,7 @@
         <div class="__sn_footer">
             <ul class="__sn_hd_ul">
                 <li class="__sn_hd_li">
-                    <span>HELP & SETTINGS</span>            
+                    <span>{{defaultLocale.HelpSettings}}</span>            
                     <ul class="__sn_bd_ul">
                         <li class="__sn_bd_li">
                             <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">list_alt

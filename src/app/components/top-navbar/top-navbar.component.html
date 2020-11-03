@@ -14,7 +14,7 @@
         </div>
         <div class="__cart_container">
             <p class="__nav_res_login">
-                <button type="submit" class="__form_field __btns __loginBtn">{{defaultLocale.NavLoginCaps}}</button>
+                <button type="submit" (click)="goToLogin()" class="__form_field __btns __loginBtn">{{defaultLocale.NavLoginCaps}}</button>
             </p>
             <p [matMenuTriggerFor]="yourAccount" class="__nav_res_menu">
                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">person_pin
@@ -30,8 +30,8 @@
             <mat-menu #yourAccount="matMenu">
                 <div class="__ya_constainer">
                     <div class="__ya_signin_login">
-                        <button type="submit" class="__form_field __btns __loginBtn">{{defaultLocale.NavLoginCaps}}</button>
-                        <p>{{defaultLocale.NotCustomer}} &nbsp; <span>{{defaultLocale.SignupImmediately}}</span></p>
+                        <button type="submit" (click)="goToLogin()" class="__form_field __btns __loginBtn">{{defaultLocale.NavLoginCaps}}</button>
+                        <p>{{defaultLocale.NotCustomer}} &nbsp; <span (click)="goToRegister()">{{defaultLocale.SignupImmediately}}</span></p>
                     </div>
                     <hr />
                     <div class="__ya_menus">
@@ -241,7 +241,7 @@
                             <span>Settings</span>
                         </li>
                         <li class="__sn_bd_li">
-                            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">keyboard_arrow_right
+                            <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">headset_mic
                             </mat-icon>   
                             <span>Help & Support</span>
                         </li>

@@ -12,7 +12,7 @@
       [(ngModel)]="loginData.password" (keyup)="namePasswordVerify(2)" />
     <div class="__forgot_remember">
       <p>
-        <span (click)="changeScreen(3)" class="__hoverUnderline">Forgot password?</span>
+        <span (click)="goToForgotPassword()" class="__hoverUnderline">Forgot password?</span>
         <span class="__remember_container">
           <span><input type="checkbox" (change)="loginData.remember_me = !loginData.remember_me"
               [checked]="loginData.remember_me" name="" id="_loginRememberMe" /></span>
@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="__no_account_container">
-      <p>Don't have an Account? &nbsp;<b (click)="changeScreen(1)" class="__hoverUnderline">Sign up</b></p>
+      <p>Don't have an Account? &nbsp;<b (click)="goToRegister()" class="__hoverUnderline">Sign up</b></p>
     </div>
   </div>
 
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="__no_account_container">
-      <p>Already have an Account? &nbsp;<b (click)="changeScreen(2)" class="__hoverUnderline">Login</b></p>
+      <p>Already have an Account? &nbsp;<b (click)="goToLogin()" class="__hoverUnderline">Login</b></p>
     </div>
   </div>
 
@@ -80,9 +80,9 @@
       (click)="onSubmit(3)">SUBMIT</button>
     <div class="__no_account_container">
       <p>
-        <span (click)="changeScreen(1)" class="__hoverUnderline">Sign up</span>
+        <span (click)="goToRegister()" class="__hoverUnderline">Sign up</span>
         <span class="__or_seperator">- or -</span>
-        <span (click)="changeScreen(2)" class="__hoverUnderline">Login</span>
+        <span (click)="goToLogin()" class="__hoverUnderline">Login</span>
       </p>
     </div>
   </div>

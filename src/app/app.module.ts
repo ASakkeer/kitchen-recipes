@@ -17,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalWindowComponent } from './components/modal-window/modal-window.component';
 import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { ProductsListComponent } from './pages/products-list/products-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
     LoginRegisterComponent,
     ModalWindowComponent,
     TopNavbarComponent,
-    HomepageComponent
+    HomepageComponent,
+    ProductsListComponent
   ],
   imports: [
     BrowserModule,

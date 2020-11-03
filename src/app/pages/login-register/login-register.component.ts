@@ -136,8 +136,18 @@ export class LoginRegisterComponent implements OnInit {
   showSpinner = false;
 
   constructor(private router: Router) {
-    this.isLoginScreen = true;
-    this.isForgotScreen = false;
+    console.log(this.router.url)
+    if (this.router.url === '/login') {
+      this.isLoginScreen = true;
+      this.isForgotScreen = false;
+    } else if (this.router.url === '/signup') {
+      this.isLoginScreen = false;
+      this.isForgotScreen = false;
+    } else if (this.router.url === '/forgot-password') {
+      this.isLoginScreen = false;
+      this.isForgotScreen = true;
+    }
+
     this.displayError = false;
     this.invalidEmail = false;
     this.showSpinner = false;
@@ -161,12 +171,29 @@ export class LoginRegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goToLogin() {
+    this.router.navigate(['login']);
+  }
+
+  goToRegister() {
+    this.router.navigate(['signup']);
+  }
+
+  goToForgotPassword() {
+    this.router.navigate(['forgot-password']);
+  }
+
   rememberClick() {
     this.loginData.remember_me = !this.loginData.remember_me;
   }
 
   namePasswordVerify(field) {
     // console.log(field);
+    if (field === 1) {
+
+    } else {
+      // Do something
+    }
   }
 
   async onSubmit(checkSubmit) {

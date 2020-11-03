@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-// import { ɵROUTER_PROVIDERS } from '@angular/router';
+import { Router } from '@angular/router';
 import Config from '../../configuration/app.config.json';
 import locale from '../../configuration/language/en.json';
 import {
@@ -358,11 +358,19 @@ export class TopNavbarComponent implements OnInit {
   appConfig = Config;
   defaultLocale = locale;
 
-  constructor() {
+  constructor(private router: Router) {
     this.showSidenav = false;
   }
 
   ngOnInit(): void {
+  }
+
+  goToLogin() {
+    this.router.navigate(['login']);
+  }
+
+  goToRegister() {
+    this.router.navigate(['signup']);
   }
 
 }

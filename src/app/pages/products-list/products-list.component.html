@@ -1,0 +1,46 @@
+<app-top-navbar></app-top-navbar>
+<div class="__products_container">
+    <div class="__products_path_container">
+        <div class="__products_result_count">
+            <p>1-48 of over 50,000 results for "t-shirts"</p>
+        </div>
+        <div class="__products_sortby">
+            <p [matMenuTriggerFor]="yourAccount" class="__nav_res_menu_show">
+                <span>{{selectedSortByValue.name }}</span> 
+                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">expand_more
+                </mat-icon>
+            </p>
+            <mat-menu #yourAccount="matMenu">
+                <div class="__ya_constainer">
+                    <div class="__ya_menus">
+                        <ul>
+                            <li *ngFor="let item of sortByValueList" (click)="selectedSortByValue = item">
+                                <!-- <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">account_circle
+                                </mat-icon> -->
+                                <span>{{item.name}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </mat-menu>
+            <!-- <select name="" id="">
+                <option value="" *ngFor="let item of sortByValueList">{{item.name}}</option>
+            </select> -->
+        </div>
+    </div>
+    <div class="__products_list_container">
+        <div class="__products_left_container">
+
+        </div>
+        <div class="__products_right_container">
+            <div class="__products_item_container">
+                <mat-card  *ngFor="let item of itemList">
+                    <div class="__product_item">
+                        <img src="{{item}}" alt="">
+                    </div>
+                </mat-card>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,4 @@
+@import "~ngx-bar-rating/themes/br-stars-theme";
 /* You can add global styles to this file, and also import other style files */
 * {
   font-family: "Lato", sans-serif;
@@ -28,4 +29,9 @@ input {
 .mat-card {
   background: #ffffff;
   color: #000;
+}
+
+.br-stars .br-unit {
+  width: 13px;
+  height: 13px;
 }

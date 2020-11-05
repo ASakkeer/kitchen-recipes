@@ -94,6 +94,7 @@
 
 .__product_item img {
   height: 310px;
+  width: 100%;
 }
 
 .__products_item_container mat-card {
@@ -101,6 +102,10 @@
   padding: 5px;
   min-width: 258px;
   width: 23%;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
 }
 
 .__product_actions {
@@ -146,4 +151,218 @@ span.__indicator_active {
   -moz-transition: all 0.15s ease-out;
   -o-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
+}
+
+.__product_details p,
+.__product_details h3,
+.__product_details span {
+  margin: 0;
+}
+
+.__product_details {
+  padding: 5px;
+  border-top: 1px solid #e6e6e6;
+}
+
+h3.__brand_name {
+  font-weight: 500;
+  color: #4a6076;
+}
+
+p.__product_name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.__product_size {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+
+.__product_size span {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #4a6076;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #4a6076;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.__product_size span:hover {
+  background: #c2f0dc;
+  font-weight: 700;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.__product_price {
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 1px solid #e6e6e6;
+}
+
+h3.__current_price {
+  font-weight: 600;
+  color: #4a6076;
+}
+
+p.__past_price {
+  opacity: 0.6;
+}
+
+p.__product_discount {
+  font-size: 12px;
+  color: white;
+  padding: 3px 10px;
+  background: #4a6076;
+  border-radius: 0 50px 50px 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.__products_item_container mat-card:hover {
+  box-shadow: 0px 8px 15px -1px rgba(0, 0, 0, 0.2),
+    3px 3px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+@media only screen and (max-width: 950px) {
+  .__products_left_container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .__products_item_container mat-card {
+    min-width: 280px;
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .__products_item_container mat-card {
+    min-width: 250px;
+    width: 46%;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .__products_item_container mat-card {
+    min-width: 230px;
+    width: 46%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .__products_item_container mat-card {
+    min-width: 230px;
+    width: 45%;
+  }
+  .__product_item img {
+    height: 220px;
+    width: unset;
+  }
+  .__product_item {
+    text-align: center;
+  }
+  .__product_size span {
+    width: 30px;
+    height: 30px;
+  }
+  .__products_result_count {
+    display: none;
+  }
+  .__products_path_container {
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .__products_item_container mat-card {
+    min-width: 200px;
+    width: 45%;
+  }
+  .__product_item img {
+    height: 220px;
+    width: "100%";
+  }
+  .__product_item {
+    text-align: center;
+  }
+  .__product_size span {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .__products_item_container mat-card {
+    min-width: 160px;
+    width: 49%;
+  }
+  .__product_item img {
+    height: 220px;
+    width: "100%";
+  }
+  .__product_item {
+    text-align: center;
+  }
+  .__product_size span {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .__products_item_container mat-card {
+    min-width: 160px;
+    width: 49%;
+  }
+  .__product_item img {
+    height: 190px;
+    width: "100%";
+  }
+  .__product_item {
+    text-align: center;
+  }
+  .__product_size span {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 335px) {
+  .__products_item_container mat-card {
+    min-width: 160px;
+    width: 90%;
+  }
+  .__product_item img {
+    height: 310px;
+    width: "unset";
+  }
+  .__product_item {
+    text-align: center;
+  }
+  .__product_size span {
+    width: 40px;
+    height: 40px;
+  }
 }

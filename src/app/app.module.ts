@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { LoaderComponent } from './components/loader/loader.component';
 
 import { MaterialModule } from './material';
+import { BarRatingModule } from "ngx-bar-rating";
 
 // Import library module
 import { NgxSpinnerModule } from "ngx-spinner";
@@ -37,7 +38,8 @@ import { ProductsListComponent } from './pages/products-list/products-list.compo
     NgxSpinnerModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BarRatingModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
@@ -49,7 +51,8 @@ import { ProductsListComponent } from './pages/products-list/products-list.compo
     ModalWindowComponent,
     NgxSpinnerModule,
     LoaderComponent,
-    TopNavbarComponent
+    TopNavbarComponent,
+    BarRatingModule
   ]
 })
 export class AppModule { }

@@ -99,4 +99,51 @@
 .__products_item_container mat-card {
   margin-bottom: 20px;
   padding: 5px;
+  min-width: 258px;
+  width: 23%;
+}
+
+.__product_actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span.__product_indicator {
+  padding: 3px;
+  background-color: #c2f0dc;
+  border-radius: 50px;
+  margin: 0 3px;
+  border: 1px solid #c2f0dc;
+}
+
+span.__indicator_active {
+  background-color: #c2f0dc;
+  border: 1px solid #4a6076;
+}
+
+.__indicator_section {
+  display: flex;
+  align-items: center;
+}
+
+.__product_actions mat-icon {
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 50px;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.__product_actions mat-icon:hover {
+  cursor: pointer;
+  background-color: #4a6076;
+  border-radius: 50px;
+  color: #c2f0dc;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
 }

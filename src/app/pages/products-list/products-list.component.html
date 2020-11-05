@@ -34,9 +34,33 @@
         </div>
         <div class="__products_right_container">
             <div class="__products_item_container">
-                <mat-card  *ngFor="let item of itemList">
-                    <div class="__product_item">
-                        <img src="{{item}}" alt="">
+                <mat-card  *ngFor="let item of itemList.products; let ind=index">
+                    <div class="__product_item" *ngFor="let imageList of item.images; let ind=index">
+                        <ng-container *ngIf="item.currentDisplayIndex === imageList.imageIndex">
+                            <img src="{{imageList.url}}" alt="">
+                            <div class="__product_actions">
+                                <mat-icon (click)="previousSlider(item)" class="__delete_forever" aria-hidden="false" aria-label="Example home icon">keyboard_arrow_left
+                                </mat-icon>
+                                <div class="__indicator_section">
+                                    <span *ngFor="let imageList of item.images; let ind=index" class="__product_indicator" [ngClass]="{'__indicator_active': item.currentDisplayIndex === imageList.imageIndex }"></span>
+                                </div>
+                                <mat-icon (click)="nextSlider(item)" class="__delete_forever" aria-hidden="false" aria-label="Example home icon">keyboard_arrow_right
+                                </mat-icon>
+                            </div>
+                        </ng-container>
+                    </div>
+                    <div class="__product_details">
+                        <p class="__brand_name">{{item.brand}}</p>
+                        <p class="__product_name">{{item.productName}}</p>
+                        <p class="__product_ratings">{{item.productRating}}</p>
+                        <div class="__product_size">
+                            <span *ngFor="let size of item.size">{{size}}</span>
+                        </div>
+                        <div class="__product_price">
+                            <p class="__current_price">{{item.currentPrice}}</p>
+                            <p class="__past_price">{{item.pastPrice}}</p>
+                            <p class="__product_discount">{{item.discount}}</p>
+                        </div>
                     </div>
                 </mat-card>
 

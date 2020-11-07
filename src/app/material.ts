@@ -12,6 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MatCardModule } from '@angular/material/card';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    MatCheckboxModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
@@ -46,7 +48,8 @@ import { MatCardModule } from '@angular/material/card';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    MatCheckboxModule
   ]
 })
 export class MaterialModule { }

@@ -19,6 +19,7 @@ import { ModalWindowComponent } from './components/modal-window/modal-window.com
 import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ProductsListComponent } from './pages/products-list/products-list.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProductsListComponent } from './pages/products-list/products-list.compo
     ModalWindowComponent,
     TopNavbarComponent,
     HomepageComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

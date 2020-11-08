@@ -129,14 +129,16 @@
                     </div>
                 </div>
             </mat-menu> -->
-            <p class="__nav_res_menu">
+            <p class="__nav_res_menu" (click)="goToCart()">
                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">shopping_cart
                 </mat-icon>
                 <span>{{defaultLocale.NavYourCart}}</span>
+                <span class="__cart_count">4</span>
             </p>
-            <p class="__nav_res_menu_show">
+            <p class="__nav_res_menu_show" (click)="goToCart()">
                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">shopping_cart
                 </mat-icon>
+                <span class="__cart_count">4</span>
             </p>
         </div>
     </div>

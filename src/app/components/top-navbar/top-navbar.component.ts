@@ -373,4 +373,8 @@ export class TopNavbarComponent implements OnInit {
     this.router.navigate(['signup']);
   }
 
+  goToCart() {
+    this.router.navigate(['cart']);
+  }
+
 }

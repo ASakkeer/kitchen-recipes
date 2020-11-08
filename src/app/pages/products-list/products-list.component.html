@@ -1,6 +1,58 @@
 <app-top-navbar></app-top-navbar>
 <div class="__products_container">
     <div class="__products_path_container">
+        <div class="__showmin_filter" (click)="showMiniFilter  = true">
+            <span class="__showmin_sec">
+                <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">sort
+                </mat-icon>
+                <span>Filter</span>
+            </span>
+        </div>
+        <div class="__products_left_containers" *ngIf="showMiniFilter">
+            <div class="__products_filter_containers" *ngFor="let filter of filterListData">
+                <h3>{{filter.filterTitle}}</h3>
+                <div class="__filters">
+                    <ul class="__filter_text" *ngIf="filter.filterType === 'text'">
+                        <li *ngFor="let filterItem of filter.filterList">
+                            <span>{{filterItem.filterTitle}}</span>
+                        </li>
+                    </ul>
+                    <ul class="__filter_check" *ngIf="filter.filterType === 'check'">
+                        <li *ngFor="let filterItem of filter.filterList">
+                            <!-- <span>{{filterItem.filterTitle}}</span> -->
+                            <section class="example-section">
+                                <mat-checkbox class="example-margin">{{filterItem.filterTitle}}</mat-checkbox>
+                            </section>
+                        </li>
+                    </ul>
+                    <ul class="__filter_star" *ngIf="filter.filterType === 'star'">
+                        <li *ngFor="let filterItem of filter.filterList">
+                            <bar-rating [(rate)]="filterItem.filterTitle" [max]="5" [theme]="'stars'"></bar-rating>
+                            <span>&nbsp;&nbsp; & above</span>
+                        </li>
+                    </ul>
+                    <ul class="__filter_price" *ngIf="filter.filterType === 'price'">
+                        <li *ngFor="let filterItem of filter.filterList">
+                            <span>{{filterItem.filterTitle}}</span>
+                        </li>
+                        <div class="__price_container">
+                            <input type="number" placeholder="₹ Min" class="__minmax">
+                            <input type="number" placeholder="₹ Max" class="__minmax">
+                            <button type="submit">Go</button>
+                        </div>
+                    </ul>
+                    <ul class="__filter_color" *ngIf="filter.filterType === 'color'">
+                        <li *ngFor="let filterItem of filter.filterList">
+                            <span [ngStyle]="{'background-color': filterItem.filterTitle}"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="__filter_actions">
+                <button class="__filter_cancel" (click)="showMiniFilter  = false">Cancel</button>
+                <button class="__filter_apply" (click)="applyFilter()">Apply</button>
+            </div>
+        </div>
         <div class="__products_result_count">
             <p>1-48 of over 50,000 results for "t-shirts"</p>
         </div>

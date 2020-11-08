@@ -14,6 +14,7 @@ export class ProductsListComponent implements OnInit {
   filterListData;
   currentItemSlide = 0
   currentSlide = 0;
+  showMiniFilter = false;
   constructor() {
     this.sortByValueList = [
       {
@@ -787,6 +788,11 @@ export class ProductsListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  applyFilter() {
+    this.showMiniFilter = false
+    // Do something
   }
 
 }

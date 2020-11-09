@@ -1,7 +1,7 @@
 <app-top-navbar></app-top-navbar>
 
 <div class="__carts_container">
-    <div class="__carts_box">
+    <div class="__carts_box" *ngIf="itemList.products.length === 0">
         <div class="__carts_image">
             <img src="../../../assets/images/empty-cart.png" alt="" />
         </div>
@@ -11,6 +11,55 @@
         </div>
         <div class="__carts_actions">
             <button>Continue Shopping</button>
+        </div>
+    </div>
+    <div class="__cart_details" *ngIf="itemList.products.length !== 0">
+        <div class="__cart_lists">
+            <div class="__lists_title">
+                <p>Your Shopping Cart ({{itemList.products.length}})</p>
+                <p>Price</p>
+            </div>
+            <div class="__lists" *ngFor="let item of itemList.products">
+                <div class="__list_left">
+                    <div class="__list_identity">
+                        <img src="{{item.selectedProductImage}}" alt="">
+                        <div class="__count_change">
+                            <mat-icon class="__delete_forever" aria-hidden="false"
+                                aria-label="Example home icon">keyboard_arrow_left
+                            </mat-icon>
+                            <span>{{item.currentQuantity}}</span>
+                            <mat-icon class="__delete_forever" aria-hidden="false"
+                                aria-label="Example home icon">keyboard_arrow_right
+                            </mat-icon>
+                        </div>
+                    </div>
+                    <div class="__list_details">
+                        <h3>{{item.productName}}</h3>
+                        <p>Size: {{item.selectedSize}}</p>
+                        <p>{{item.deliveryDays}} <span>| Free</span></p>
+                        <div class="__list_item_actions">
+                            <button class="__list_delete">Delete</button>
+                            <button class="__list_move">Save for later</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="__list_right">
+                    <p><sup>&#x20B9;</sup>{{item.currentPrice}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="__cart_price">
+            <div class="__price_container">
+                <div class="__price_title">
+                    <p>SUMMARY</p>
+                </div>
+                <div class="__prices">
+                    <div class="__price_ui"  *ngFor="let price of itemList.priceDetails">
+                        <span [ngClass]="{'__textSmall': price.displaySize === 1, '__textBold': price.displaySize === 2 }">{{price.title}}</span>
+                        <span [ngClass]="{'__textSmall': price.displaySize === 1, '__textBold': price.displaySize === 2 }"><sup>&#x20B9;</sup> {{price.totalAmount}}</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -50,6 +50,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -78,6 +85,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -106,6 +120,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -134,6 +155,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -162,6 +190,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -190,6 +225,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -218,6 +260,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -246,6 +295,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -274,6 +330,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -302,6 +365,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -330,6 +400,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -358,6 +435,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -386,6 +470,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -414,6 +505,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -442,6 +540,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -470,6 +575,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -498,6 +610,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -526,6 +645,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",
@@ -554,6 +680,13 @@ export class ProductsListComponent implements OnInit {
           discount: "20%",
           size: ["S", "L", "M", "XL", "2XL"],
           isInWishlist: false,
+          productRemaining: 10,
+          shippingFreeAvailable: true,
+          currentQuantity: 1,
+          selectedSize: "",
+          selectedColor: "",
+          deliveryDays: "",
+          selectedProductImage: "",
           images: [
             {
               _id: "001",

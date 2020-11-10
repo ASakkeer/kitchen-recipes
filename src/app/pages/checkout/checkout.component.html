@@ -1,7 +1,7 @@
 <app-top-navbar></app-top-navbar>
 
 <div class="__carts_container">
-    <div class="__carts_box" *ngIf="itemList.products.length === 0">
+    <div class="__carts_box" *ngIf="itemList.addresses.length === 0">
         <div class="__carts_image">
             <img src="../../../assets/images/empty-cart.png" alt="" />
         </div>
@@ -13,38 +13,27 @@
             <button>Continue Shopping</button>
         </div>
     </div>
-    <div class="__cart_details" *ngIf="itemList.products.length !== 0">
+    <div class="__cart_details" *ngIf="itemList.addresses.length !== 0">
         <div class="__cart_lists">
             <div class="__lists_title">
-                <p>Your Shopping Cart ({{itemList.products.length}})</p>
-                <p>Price</p>
+                <p>Your Address ({{itemList.addresses.length}})</p>
             </div>
-            <div class="__lists" *ngFor="let item of itemList.products">
-                <div class="__list_left">
-                    <div class="__list_identity">
-                        <img src="{{item.selectedProductImage}}" alt="">
-                        <div class="__count_change">
-                            <mat-icon class="__delete_forever" aria-hidden="false"
-                                aria-label="Example home icon">keyboard_arrow_left
-                            </mat-icon>
-                            <span>{{item.currentQuantity}}</span>
-                            <mat-icon class="__delete_forever" aria-hidden="false"
-                                aria-label="Example home icon">keyboard_arrow_right
-                            </mat-icon>
-                        </div>
-                    </div>
-                    <div class="__list_details">
-                        <h3>{{item.productName}}</h3>
-                        <p>Size: {{item.selectedSize}}</p>
-                        <p>{{item.deliveryDays}} <span>| Free</span></p>
-                        <div class="__list_item_actions">
-                            <button class="__list_delete">Delete</button>
-                            <button class="__list_move">Save for later</button>
-                        </div>
+            <div class="__list_address">
+                <div class="__addresses" *ngFor="let item of itemList.addresses">
+                    <h3>{{item.name}}</h3>
+                    <p>Phone No: {{item.mobileNumber}}</p>
+                    <p>{{item.addressLineOne}}</p>
+                    <p>{{item.addressLineTwo}}</p>
+                    <p>{{item.city}} - {{item.pinCode}}.</p>
+                    <p>{{item.landmark}}</p>
+                    <p>{{item.state}}.</p>
+                    <div class="__address_identity">
+                        <img title="Your billing address" src="../../../assets/images/billingAddress.png" alt="">
+                        <img title="Your shipping address" src="../../../assets/images/shippingAddress.png" alt="">
                     </div>
                 </div>
-                <div class="__list_right">
-                    <p><sup>&#x20B9;</sup>{{item.currentPrice}}</p>
+                <div class="__addresses __addnew_address">
+                    <img src="../../../assets/images/addAddress.png" alt="">
                 </div>
             </div>
         </div>

@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.scss']
+  selector: 'app-checkout',
+  templateUrl: './checkout.component.html',
+  styleUrls: ['./checkout.component.scss']
 })
-export class CartComponent implements OnInit {
+export class CheckoutComponent implements OnInit {
 
   itemList;
 
@@ -101,6 +101,56 @@ export class CartComponent implements OnInit {
           title: "Total Amount",
           totalAmount: "1440",
           displaySize: 2
+        }
+      ],
+      addresses: [
+        {
+          name: "Sakkeer A",
+          mobileNumber: "7904545875",
+          pinCode: "641111",
+          addressLineOne: "85/2, KGF Apartment, ABC Street,",
+          addressLineTwo: "R.H. Road, Kanniyakumari,",
+          city: "Coimbatore",
+          landmark: "Near DSLR Shop",
+          state: "Tamil Nadu",
+          defaultBilling: true,
+          defaultShipping: true
+        },
+        {
+          name: "Sakkeer A",
+          mobileNumber: "9854545875",
+          pinCode: "641111",
+          addressLineOne: "34/2, MMA Apartment, ABC Kumar Street,",
+          addressLineTwo: "VV Main Road, Kanniyakumari,",
+          city: "Coimbatore",
+          landmark: "Near DSLR Shop",
+          state: "Tamil Nadu",
+          defaultBilling: true,
+          defaultShipping: true
+        },
+        {
+          name: "Sakkeer A",
+          mobileNumber: "9854545875",
+          pinCode: "641111",
+          addressLineOne: "34/2, MMA Apartment, ABC Kumar Street,",
+          addressLineTwo: "VV Main Road, Kanniyakumari,",
+          city: "Coimbatore",
+          landmark: "Near DSLR Shop",
+          state: "Tamil Nadu",
+          defaultBilling: true,
+          defaultShipping: true
+        },
+        {
+          name: "Sakkeer A",
+          mobileNumber: "9854545875",
+          pinCode: "641111",
+          addressLineOne: "34/2, MMA Apartment, ABC Kumar Street,",
+          addressLineTwo: "VV Main Road, Kanniyakumari,",
+          city: "Coimbatore",
+          landmark: "Near DSLR Shop",
+          state: "Tamil Nadu",
+          defaultBilling: true,
+          defaultShipping: true
         }
       ]
     }

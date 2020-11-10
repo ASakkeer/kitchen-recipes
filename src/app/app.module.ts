@@ -20,6 +20,7 @@ import { TopNavbarComponent } from './components/top-navbar/top-navbar.component
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ProductsListComponent } from './pages/products-list/products-list.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CartComponent } from './pages/cart/cart.component';
     TopNavbarComponent,
     HomepageComponent,
     ProductsListComponent,
-    CartComponent
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

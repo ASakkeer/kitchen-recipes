@@ -60,3 +60,19 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.mat-snack-bar-container {
+  color: rgb(255 255 255);
+  background: #4a6076;
+}
+
+.mat-simple-snackbar-action button {
+  max-height: 36px;
+  min-width: 0;
+  background: #ffffa3;
+  color: black;
+}
+
+button {
+  border-radius: 5px;
+}

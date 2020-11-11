@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-checkout',
@@ -9,9 +14,15 @@ import { Router } from '@angular/router';
 })
 export class CheckoutComponent implements OnInit {
 
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
   itemList;
+  showModal;
+  modalNumber;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private _snackBar: MatSnackBar) {
+    this.showModal = false;
+    this.modalNumber = 0;
     this.itemList = {
       products: [
         {
@@ -113,7 +124,7 @@ export class CheckoutComponent implements OnInit {
           city: "Coimbatore",
           landmark: "Near DSLR Shop",
           state: "Tamil Nadu",
-          defaultBilling: true,
+          defaultBilling: false,
           defaultShipping: true
         },
         {
@@ -126,7 +137,7 @@ export class CheckoutComponent implements OnInit {
           landmark: "Near DSLR Shop",
           state: "Tamil Nadu",
           defaultBilling: true,
-          defaultShipping: true
+          defaultShipping: false
         },
         {
           name: "Sakkeer A",
@@ -137,8 +148,8 @@ export class CheckoutComponent implements OnInit {
           city: "Coimbatore",
           landmark: "Near DSLR Shop",
           state: "Tamil Nadu",
-          defaultBilling: true,
-          defaultShipping: true
+          defaultBilling: false,
+          defaultShipping: false
         },
         {
           name: "Sakkeer A",
@@ -149,8 +160,8 @@ export class CheckoutComponent implements OnInit {
           city: "Coimbatore",
           landmark: "Near DSLR Shop",
           state: "Tamil Nadu",
-          defaultBilling: true,
-          defaultShipping: true
+          defaultBilling: false,
+          defaultShipping: false
         }
       ]
     }
@@ -159,8 +170,36 @@ export class CheckoutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openSnackBar(message) {
+    this._snackBar.open(message, 'Close', {
+      duration: 2000,
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+    });
+  }
+
   goToCheckout() {
     this.router.navigate(['checkout']);
+  }
+
+  changeShippingAddress(curAddress, index) {
+    for (let i = 0; i < this.itemList.addresses.length; i++) {
+      if (i === index) {
+        this.itemList.addresses[i].defaultShipping = true;
+      } else {
+        this.itemList.addresses[i].defaultShipping = false;
+      }
+    }
+  }
+
+  showModalForAction(count) {
+    this.showModal = true;
+    this.modalNumber = count;
+  }
+
+  cancelModal() {
+    this.showModal = false;
+    this.modalNumber = 0;
   }
 
 }

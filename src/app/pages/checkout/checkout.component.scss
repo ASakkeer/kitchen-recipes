@@ -246,7 +246,7 @@
 }
 
 .__address_identity img {
-  height: 40px;
+  height: 35px;
   padding: 5px;
 }
 
@@ -273,6 +273,142 @@
 .__addresses.__addnew_address img {
   height: 75px;
   padding: 15px;
+}
+
+.__activeAddress {
+  border: 1px solid #00c300;
+  background: honeydew;
+  box-shadow: 3px 3px 10px rgba(74, 96, 118, 0.29);
+}
+
+button.__deliverToThisAddress {
+  width: 100%;
+  padding: 10px;
+  background: #4a6076;
+  color: white;
+  border: 1px solid #4a6076;
+  margin: 5px 0;
+}
+
+.__modal_container {
+  position: fixed;
+  background: transparent;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.__modal_overlay {
+  position: fixed;
+  background: rgb(0 0 0 / 60%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.__modal_ui {
+  min-width: 250px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 3;
+  max-width: 400px;
+}
+
+.__modal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 5px 0;
+}
+
+.__modal_title h2 {
+  margin: 0px;
+  color: #4a6076;
+}
+
+.__form_field {
+  padding: 7px 10px;
+  outline: none;
+  text-align: center;
+  margin: 0 5px;
+  width: 30%;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+input.__form_field:focus {
+  box-shadow: 0px 5px 10px #405367;
+  width: 320px;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+button.__form_field.__btns:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.__cancelBtn {
+  background-color: gray;
+  color: white;
+  border: 1px solid white;
+  opacity: 0.9;
+}
+
+.__doneBtn {
+  background-color: #4a6076;
+  color: white;
+  border: 1px solid white;
+  opacity: 0.9;
+}
+
+.__cancelBtn:hover,
+.__doneBtn:hover {
+  opacity: 1;
+}
+
+.__modal_content {
+  padding: 10px 0;
+}
+
+.__modal_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.__modal_content p {
+  font-size: 16px;
+  color: #565656;
+}
+
+.__delete_forever {
+  font-size: 30px;
+  color: orangered;
+}
+
+.__modal_close mat-icon {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 400px) {
+  .__modal_ui {
+    width: 95%;
+  }
 }
 
 @media only screen and (max-width: 1177px) {

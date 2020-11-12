@@ -6,6 +6,7 @@ import {
   MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-checkout',
@@ -15,12 +16,27 @@ import {
 export class CheckoutComponent implements OnInit {
 
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
-  verticalPosition: MatSnackBarVerticalPosition = 'top';
+  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
   itemList;
   showModal;
   modalNumber;
+  contactForm: FormGroup;
 
-  constructor(private router: Router, private _snackBar: MatSnackBar) {
+  constructor(private router: Router, private _snackBar: MatSnackBar, private formBuilder: FormBuilder) {
+
+    this.contactForm = this.formBuilder.group({
+      name: [''],
+      mobileNumber: [''],
+      addressLineOne: [''],
+      addressLineTwo: [''],
+      city: [''],
+      landmark: [''],
+      state: [''],
+      pinCode: [''],
+      defaultBilling: [false],
+      defaultShipping: [false],
+    });
+
     this.showModal = false;
     this.modalNumber = 0;
     this.itemList = {
@@ -200,6 +216,10 @@ export class CheckoutComponent implements OnInit {
   cancelModal() {
     this.showModal = false;
     this.modalNumber = 0;
+  }
+
+  onSubmit() {
+    console.log('Your form data : ', this.contactForm.value);
   }
 
 }

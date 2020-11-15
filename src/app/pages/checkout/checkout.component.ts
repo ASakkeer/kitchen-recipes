@@ -20,11 +20,25 @@ export class CheckoutComponent implements OnInit {
   itemList;
   showModal;
   modalNumber;
-  contactForm: FormGroup;
+  addNewAddressForm: FormGroup;
+  editAddressForm: FormGroup;
 
   constructor(private router: Router, private _snackBar: MatSnackBar, private formBuilder: FormBuilder) {
 
-    this.contactForm = this.formBuilder.group({
+    this.addNewAddressForm = this.formBuilder.group({
+      name: [''],
+      mobileNumber: [''],
+      addressLineOne: [''],
+      addressLineTwo: [''],
+      city: [''],
+      landmark: [''],
+      state: [''],
+      pinCode: [''],
+      defaultBilling: [false],
+      defaultShipping: [false],
+    });
+
+    this.editAddressForm = this.formBuilder.group({
       name: [''],
       mobileNumber: [''],
       addressLineOne: [''],
@@ -208,7 +222,50 @@ export class CheckoutComponent implements OnInit {
     }
   }
 
-  showModalForAction(count) {
+  reserForms() {
+    this.addNewAddressForm = this.formBuilder.group({
+      name: [''],
+      mobileNumber: [''],
+      addressLineOne: [''],
+      addressLineTwo: [''],
+      city: [''],
+      landmark: [''],
+      state: [''],
+      pinCode: [''],
+      defaultBilling: [false],
+      defaultShipping: [false],
+    });
+
+    this.editAddressForm = this.formBuilder.group({
+      name: [''],
+      mobileNumber: [''],
+      addressLineOne: [''],
+      addressLineTwo: [''],
+      city: [''],
+      landmark: [''],
+      state: [''],
+      pinCode: [''],
+      defaultBilling: [false],
+      defaultShipping: [false],
+    });
+  }
+
+  async showModalForAction(count, curAdd) {
+    await this.reserForms();
+    if (count === 3) {
+      this.editAddressForm = this.formBuilder.group({
+        name: [curAdd.name],
+        mobileNumber: [curAdd.mobileNumber],
+        addressLineOne: [curAdd.addressLineOne],
+        addressLineTwo: [curAdd.addressLineTwo],
+        city: [curAdd.city],
+        landmark: [curAdd.landmark],
+        state: [curAdd.state],
+        pinCode: [curAdd.pinCode],
+        defaultBilling: [curAdd.defaultBilling],
+        defaultShipping: [curAdd.defaultShipping],
+      });
+    }
     this.showModal = true;
     this.modalNumber = count;
   }
@@ -219,7 +276,10 @@ export class CheckoutComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('Your form data : ', this.contactForm.value);
+    this.showModal = false;
+    this.modalNumber = 0;
+    console.log('Your form data : ', this.addNewAddressForm.value);
+    console.log('Your form data : ', this.editAddressForm.value);
   }
 
 }

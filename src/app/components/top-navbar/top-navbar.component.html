@@ -5,7 +5,7 @@
                 <mat-icon class="__delete_forever" aria-hidden="false" aria-label="Example home icon">{{appConfig.navbarConfig.sidenavIcon}}
                 </mat-icon>
             </button>
-            <img src="{{appConfig.navbarConfig.appLogo}}" alt="">
+            <img src="{{appConfig.navbarConfig.appLogo}}" alt="" (click)="goToHome()">
         </div>
         <div class="__search_container">
             <input type="text" class="__search_box" spellcheck="false" placeholder="{{defaultLocale.NavSearchboxPlaceholder}}">

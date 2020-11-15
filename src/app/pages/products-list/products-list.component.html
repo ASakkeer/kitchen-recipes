@@ -124,7 +124,7 @@
         </div>
         <div class="__products_right_container">
             <div class="__products_item_container">
-                <mat-card *ngFor="let item of itemList.products; let ind=index">
+                <mat-card *ngFor="let item of itemList.products; let ind=index" (click)="viewProduct(item)">
                     <div class="__product_item" *ngFor="let imageList of item.images; let ind=index">
                         <ng-container *ngIf="item.currentDisplayIndex === imageList.imageIndex">
                             <img src="{{imageList.url}}" alt="">
@@ -158,6 +158,7 @@
                             <h3 class="__current_price"><sup>&#x20B9;</sup> {{item.currentPrice}}</h3>
                             <p class="__past_price"><sup>&#x20B9;</sup> <del>{{item.pastPrice}}</del></p>
                             <p class="__product_discount">{{item.discount}} OFF</p>
+                            <!-- <button>ADD TO CART</button> -->
                         </div>
                         <div class="__wishlist_container">
                             <mat-icon *ngIf="!item.isInWishlist" (click)="item.isInWishlist = !item.isInWishlist" class="__delete_forever" aria-hidden="false" aria-label="Example home icon">favorite_border

@@ -387,6 +387,29 @@ span.__showmin_sec {
   display: none;
 }
 
+.__product_price button {
+  position: absolute;
+  padding: 18px;
+  width: 100%;
+  bottom: 0;
+  border: 1px solid #4a6076;
+  background: #4a6076;
+  color: white;
+  transform: scale(1, 0);
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.__products_item_container mat-card:hover .__product_price button {
+  transform: scale(1, 1);
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
 @media only screen and (max-width: 950px) {
   .__products_left_container {
     display: none;

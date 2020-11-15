@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate, useAnimation } from "@angular/animations";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products-list',
@@ -15,7 +16,7 @@ export class ProductsListComponent implements OnInit {
   currentItemSlide = 0
   currentSlide = 0;
   showMiniFilter = false;
-  constructor() {
+  constructor(private router: Router) {
     this.sortByValueList = [
       {
         _id: 1,
@@ -41,6 +42,7 @@ export class ProductsListComponent implements OnInit {
     this.itemList = {
       products: [
         {
+          _id: "ABCDFRFSFDZEA",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -76,6 +78,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEB",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -111,6 +114,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEC",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -146,6 +150,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZED",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -181,6 +186,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEE",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -216,6 +222,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEF",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -251,6 +258,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEG",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -286,6 +294,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEAH",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -321,6 +330,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEI",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -356,6 +366,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEJ",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -391,6 +402,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEK",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -426,6 +438,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEL",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -461,6 +474,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEM",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -496,6 +510,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEN",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -531,6 +546,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEO",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -566,6 +582,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEP",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -601,6 +618,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZEQ",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -636,6 +654,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZER",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -671,6 +690,7 @@ export class ProductsListComponent implements OnInit {
           ]
         },
         {
+          _id: "ABCDFRFSFDZES",
           currentDisplayIndex: 0,
           brand: "Scott International",
           productName: "Men's Regular Fit T-Shirt (Pack of 2)",
@@ -926,6 +946,11 @@ export class ProductsListComponent implements OnInit {
   applyFilter() {
     this.showMiniFilter = false
     // Do something
+  }
+
+  viewProduct(curProduct) {
+    console.log(curProduct)
+    // this.router.navigate([]).then(result => { window.open(`product-details/${curProduct._id}`, '_blank'); });
   }
 
 }

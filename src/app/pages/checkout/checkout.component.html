@@ -33,7 +33,7 @@
                             class="__deliverToThisAddress">Deliver to this address</button>
                         <img *ngIf="!item.defaultBilling && !item.defaultShipping" (click)="showModalForAction(1)"
                             title="Your billing address" src="../../../assets/images/delete.png" alt="">
-                        <img title="Your billing address" (click)="showModalForAction(3)"
+                        <img title="Your billing address" (click)="showModalForAction(3, item)"
                             src="../../../assets/images/document.png" alt="">
                         <img *ngIf="item.defaultBilling" title="Your billing address"
                             (click)="openSnackBar('This is your default billing address')"
@@ -114,7 +114,7 @@
                     <div class="__form_field_div">
                         <h3>Add New Address</h3>
                     </div>
-                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                    <form [formGroup]="addNewAddressForm" (ngSubmit)="onSubmit()">
 
                         <div class="__form_field_div">
                             <input type="text" name="name" placeholder="Your name here" formControlName="name">
@@ -152,7 +152,7 @@
                         <div class="__modal_footer">
                             <div class="__modal_btns">
                                 <!-- <button type="submit" class="__form_field __btns __cancelBtn" (click)="cancelModal()">Cancel</button> -->
-                                <button type="submit" class="__addNewAddBtn __btns __doneBtn" (click)="cancelModal()">Create</button>
+                                <button type="submit" class="__addNewAddBtn __btns __doneBtn">Create</button>
                             </div>
                         </div>
                     </form>
@@ -177,7 +177,7 @@
                     <div class="__form_field_div">
                         <h3>Edit Address</h3>
                     </div>
-                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                    <form [formGroup]="editAddressForm" (ngSubmit)="onSubmit()">
 
                         <div class="__form_field_div">
                             <input type="text" name="name" placeholder="Your name here" formControlName="name">
@@ -215,7 +215,7 @@
                         <div class="__modal_footer">
                             <div class="__modal_btns">
                                 <!-- <button type="submit" class="__form_field __btns __cancelBtn" (click)="cancelModal()">Cancel</button> -->
-                                <button type="submit" class="__addNewAddBtn __btns __doneBtn" (click)="cancelModal()">Update</button>
+                                <button type="submit" class="__addNewAddBtn __btns __doneBtn">Update</button>
                             </div>
                         </div>
                     </form>

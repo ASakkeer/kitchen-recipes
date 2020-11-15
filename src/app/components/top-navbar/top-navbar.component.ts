@@ -365,6 +365,10 @@ export class TopNavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goToHome() {
+    this.router.navigate(['']);
+  }
+
   goToLogin() {
     this.router.navigate(['login']);
   }

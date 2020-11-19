@@ -25,6 +25,7 @@ import {
   collapseAnimation, collapseHorizontallyAnimation, rotateAnimation,
   bounceInUpOnEnterAnimation, hueRotateAnimation
 } from 'angular-animations';
+import { LoginDataService } from 'src/app/services/login-data.service';
 
 @Component({
   selector: 'app-login-register',
@@ -135,7 +136,7 @@ export class LoginRegisterComponent implements OnInit {
   invalidEmail = false;
   showSpinner = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private loginService: LoginDataService) {
     console.log(this.router.url)
     if (this.router.url === '/login') {
       this.isLoginScreen = true;
@@ -172,15 +173,18 @@ export class LoginRegisterComponent implements OnInit {
   }
 
   goToLogin() {
-    this.router.navigate(['login']);
+    this.loginService.goToLogin();
+    // this.router.navigate(['login']);
   }
 
   goToRegister() {
-    this.router.navigate(['signup']);
+    this.loginService.goToRegister();
+    // this.router.navigate(['signup']);
   }
 
   goToForgotPassword() {
-    this.router.navigate(['forgot-password']);
+    this.loginService.goToForgotPassword();
+    // this.router.navigate(['forgot-password']);
   }
 
   rememberClick() {
